@@ -1,0 +1,1345 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>MfE02/2026 ความก้าวหน้าครั้งที่ 1</title>
+<link rel="preload" href="assets/supermarket.ttf" as="font" type="font/ttf" crossorigin>
+<style>
+@font-face{font-family:"Supermarket";src:url(assets/supermarket.ttf) format("truetype");font-weight:400;font-style:normal;font-display:block}
+html,body{margin:0;height:100%;background:#0A2019;overflow:hidden}
+#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;overflow:hidden}
+.slide{position:absolute;left:0;top:0;width:1920px;height:1080px;display:none}
+.slide.on{display:block}
+a{color:#A6400A;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}
+a:hover,a:focus-visible{text-decoration-thickness:4px}
+a:focus-visible{outline:3px solid #A6400A;outline-offset:4px;border-radius:4px}
+#p13 a{color:#FFD3A6}
+#p13 a:focus-visible{outline-color:#FFD3A6}
+.nav{position:fixed;top:50%;width:52px;height:52px;margin-top:-26px;border:0;border-radius:26px;background:#12302A;color:#FFFFFF;opacity:.22;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;transition:opacity .15s}
+.nav:hover,.nav:focus-visible{opacity:.9}
+.nav:focus-visible{outline:3px solid #FFD3A6;outline-offset:2px}
+.nav[disabled]{visibility:hidden}
+#prev{left:10px}#next{right:10px}
+@media print{
+html,body{height:auto;overflow:visible;background:#FFFFFF}
+#stage{position:static;transform:none !important;width:1920px;height:auto;overflow:visible}
+.slide{display:block;position:relative;break-after:page;page-break-after:always}
+.nav{display:none}
+@page{size:1920px 1080px;margin:0}
+}
+</style>
+</head>
+<body>
+<main id="stage">
+<section class="slide" id="p01" data-n="1" aria-label="หน้า 1 ชื่อโครงงาน">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #F3F7F5; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="flex-grow: 1; min-height: 0; display: flex; align-items: center; gap: 72px">
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 34px">
+<div style="font-size: 30px; color: #0E6B57">การนำเสนอความก้าวหน้าครั้งที่ 1 • โครงงาน MfE02/2026</div>
+<h1 style="margin: 0; font-size: 68px; font-weight: 400; line-height: 1.3">การออกแบบและปรับปรุงกระบวนการพับผ้า<br>ในโรงพยาบาล : กรณีศึกษา</h1>
+<div style="font-size: 40px; color: #0B4D40">งานจ่ายผ้ากลาง โรงพยาบาลสงขลานครินทร์</div>
+<div style="height: 2px; background: #C9D8D2"></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 40px; font-size: 30px">
+<div>นายจารุเดช เพชรวิโรจน์ 6610110039</div>
+<div>นายพีรพัฒน์ ภักดีอักษร 6610110216</div>
+<div>นายวรากร ปิยวิสุทธิรักษ์ 6610110634</div>
+<div>นายวุฒิพงศ์ สนอยู่ 6610110642</div>
+</div>
+<div style="font-size: 30px">อาจารย์ที่ปรึกษา รองศาสตราจารย์ วนิดา รัตนมณี</div>
+<div style="font-size: 26px; color: #47605A">226-461 MANUFACTURING ENGINEERING PROJECT I • ภาคการศึกษาที่ 1 ปีการศึกษา 2569<br>หลักสูตรวิศวกรรมการผลิต คณะวิศวกรรมศาสตร์ มหาวิทยาลัยสงขลานครินทร์</div>
+</div>
+<img src="assets/site-linen.jpg" alt="ผ้ารอพับบนโต๊ะพับ งานจ่ายผ้ากลาง" style="width: 600px; height: 880px; object-fit: cover; border-radius: 24px">
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<span>15 ตุลาคม 2569</span>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">1</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p02" data-n="2" aria-label="หน้า 2 ความเป็นมาของปัญหา">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #F3F7F5; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #0E6B57">ความเป็นมาของปัญหา</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">กระบวนการพับมีผ้าค้างทุกวัน ณ เวลาปิดทำการ</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; gap: 56px">
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 26px">
+<div style="display: flex; align-items: center; gap: 10px; font-size: 40px">
+<div style="flex: 1 1 0; text-align: center; padding: 18px 0; background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 12px">รับ</div>
+<svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#47605A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4l12 11-12 11"></path></svg>
+<div style="flex: 1 1 0; text-align: center; padding: 18px 0; background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 12px">ซัก</div>
+<svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#47605A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4l12 11-12 11"></path></svg>
+<div style="flex: 1 1 0; text-align: center; padding: 18px 0; background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 12px">อบ</div>
+<svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#47605A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4l12 11-12 11"></path></svg>
+<div style="flex: 1 1 0; text-align: center; padding: 18px 0; background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 12px">รีด</div>
+<svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#47605A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4l12 11-12 11"></path></svg>
+<div style="flex: 1.5 1 0; text-align: center; padding: 18px 0; background: #0B4D40; color: #FFFFFF; border: 2px solid #0B4D40; border-radius: 12px">พับ (คอขวด)</div>
+<svg width="22" height="30" viewBox="0 0 22 30" fill="none" stroke="#47605A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4l12 11-12 11"></path></svg>
+<div style="flex: 1 1 0; text-align: center; padding: 18px 0; background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 12px">จ่าย</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 16px; padding: 20px 28px; display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 32px; color: #47605A">ผ้าที่ซักภายในหน่วยงาน เฉลี่ย</div>
+<div style="font-size: 68px; line-height: 1.2; color: #0E6B57">7,836.10 <span style="font-size: 36px">กก./วัน</span></div>
+<div style="font-size: 32px">จ้างซักภายนอกอีกประมาณ 3,000 กก./วัน</div>
+</div>
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 16px; padding: 20px 28px; display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 32px; color: #47605A">ผ้าค้างพับ ณ เวลาปิดทำการ เฉลี่ย</div>
+<div style="font-size: 68px; line-height: 1.2"><a href="#p15">1,008.90</a> <span style="font-size: 36px; color: #0E6B57">กก./วัน</span></div>
+<div style="font-size: 32px">ใน <a href="#p17">6 โซนการพับ</a> ที่ศึกษา (751.9–1,388.3)</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px; font-size: 38px">
+<div style="display: flex; gap: 16px"><span style="color: #0E6B57">•</span><span>เครื่องอบ 16 เครื่อง ไม่มีผ้ารอเข้าอบ ผ้าจึงมารอที่กระบวนการพับ</span></div>
+<div style="display: flex; gap: 16px"><span style="color: #0E6B57">•</span><span>ขั้นตอนพับไม่มีการชั่งหรือนับผ้า จึงไม่มีข้อมูลเชิงปริมาณของกระบวนการ</span></div>
+<div style="display: flex; gap: 16px"><span style="color: #0E6B57">•</span><span>ผลกระทบ: ใช้พื้นที่วางผ้ารอพับ ผ้าสะอาดเสี่ยงปนเปื้อนซ้ำ และงานค้างสะสมไปวันถัดไป</span></div>
+</div>
+</div>
+<div style="width: 600px; display: flex; flex-direction: column; gap: 14px">
+<img src="assets/site-table.jpg" alt="ผ้ารอพับบนโต๊ะพับ" style="width: 600px; height: 640px; object-fit: cover; border-radius: 20px">
+<div style="font-size: 26px; color: #47605A">ผ้ารอพับบนโต๊ะพับ งานจ่ายผ้ากลาง<br>โรงพยาบาลสงขลานครินทร์ 991 เตียง ผ้าหมุนเวียน 239 ชนิด</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<span>MfE02/2026 • ความก้าวหน้าครั้งที่ 1</span>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">2</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p03" data-n="3" aria-label="หน้า 3 วัตถุประสงค์ ขอบเขต และประโยชน์">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #F3F7F5; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #0E6B57">เป้าหมายของโครงงาน</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">วัตถุประสงค์ ขอบเขต และประโยชน์ที่คาดว่าจะได้รับ</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; gap: 24px">
+<div style="background: #0B4D40; color: #FFFFFF; border-radius: 20px; padding: 28px 44px 32px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 30px; color: #BFE3D8">วัตถุประสงค์</div>
+<div style="font-size: 40px; line-height: 1.35">เพิ่มกำลังการผลิตของกระบวนการพับผ้า โดยลดปริมาณผ้าค้างพับ ณ เวลาปิดทำการ</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
+<div style="display: flex; flex-direction: column">
+<div style="font-size: 30px; color: #BFE3D8">จากค่าเฉลี่ยก่อนปรับปรุง</div>
+<div style="font-size: 72px; line-height: 1.2"><a href="#p15" style="color: #FFD3A6">1,008.90</a> <span style="font-size: 32px">กก./วัน</span></div>
+</div>
+<div style="display: flex; flex-direction: column">
+<div style="font-size: 30px; color: #BFE3D8">ลดลงไม่น้อยกว่า</div>
+<div style="font-size: 72px; line-height: 1.2"><a href="#p14" style="color: #FFD3A6">155.56</a> <span style="font-size: 32px">กก./วัน</span></div>
+</div>
+<div style="display: flex; flex-direction: column">
+<div style="font-size: 30px; color: #BFE3D8">เหลือไม่เกิน</div>
+<div style="font-size: 72px; line-height: 1.2"><a href="#p15" style="color: #FFD3A6">853.34</a> <span style="font-size: 32px">กก./วัน</span></div>
+</div>
+</div>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 20px; padding: 26px 36px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 40px; color: #0E6B57">ขอบเขต</div>
+<div style="display: flex; flex-direction: column; gap: 16px; font-size: 34px">
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span><a href="#p17">6 จาก 13 โซนการพับ</a> ของงานจ่ายผ้ากลาง</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ผ้าชิ้นเดี่ยว 82 ชนิด เริ่มที่ <a href="#p19">ผ้ากลุ่ม A 17 ชนิด</a></span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ไม่ลงทุนเครื่องจักรขนาดใหญ่ ไม่เพิ่มบุคลากร ไม่ขยายเวลาทำงาน</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>วัดผลด้วยน้ำหนักผ้าค้างพับ 21 วันต่อเนื่อง ก่อนและหลังปรับปรุง ที่ระดับนัยสำคัญ 0.05</span></div>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 20px; padding: 26px 36px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 40px; color: #0E6B57">ประโยชน์ที่คาดว่าจะได้รับ</div>
+<div style="display: flex; flex-direction: column; gap: 16px; font-size: 34px">
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>มีวิธีวัดและค่าฐานเชิงปริมาณของกระบวนการพับ</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ลดพื้นที่วางผ้ารอพับและงานค้างสะสม</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ผ้าสะอาดรอพับสั้นลง ลดความเสี่ยงปนเปื้อนซ้ำ</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>มีลำดับผ้าเป้าหมายตามน้ำหนักจากข้อมูล 8 เดือน</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ใช้ทรัพยากรเดิม พนักงานหมุนเวียนใช้ได้ทุกคน</span></div>
+</div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<span>MfE02/2026 • ความก้าวหน้าครั้งที่ 1</span>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">3</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p04" data-n="4" aria-label="หน้า 4 แผนการดำเนินงาน">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #F3F7F5; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #0E6B57">แผนการดำเนินงาน มิถุนายน 2569 ถึง มีนาคม 2570</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">งานถึงขั้นตอนที่ 5 และเริ่มขั้นตอนที่ 6 ก่อนแผน</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 16px">
+<div style="position: relative; display: flex; flex-direction: column; gap: 8px">
+<div style="display: grid; grid-template-columns: 500px 1000px 196px; gap: 16px; align-items: center; height: 44px; font-size: 28px; color: #47605A">
+<div>ขั้นตอน</div>
+<div style="display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); text-align: center">
+<div>มิ.ย. 69</div><div>ก.ค. 69</div><div>ส.ค. 69</div><div>ก.ย. 69</div><div>ต.ค. 69</div><div>พ.ย. 69</div><div>ธ.ค. 69</div><div>ม.ค. 70</div><div>ก.พ. 70</div><div>มี.ค. 70</div>
+</div>
+<div>สถานะ</div>
+</div>
+<div style="display: grid; grid-template-columns: 500px 1000px 196px; gap: 16px; align-items: center; height: 58px; font-size: 32px">
+<div>1 ศึกษาสภาพปัจจุบันและกำหนดปัญหา</div>
+<div style="position: relative; height: 58px; background: #E4EDE9; border-radius: 6px">
+<div style="position: absolute; left: 0px; top: 9px; width: 300px; height: 16px; background: #8FB8AA; border-radius: 4px"></div>
+<div style="position: absolute; left: 0px; top: 31px; width: 300px; height: 16px; background: #0B4D40; border-radius: 4px"></div>
+</div>
+<div style="font-size: 30px">เสร็จ ตามแผน</div>
+</div>
+<div style="display: grid; grid-template-columns: 500px 1000px 196px; gap: 16px; align-items: center; height: 58px; font-size: 32px">
+<div>2 ศึกษาเอกสารและทฤษฎีที่เกี่ยวข้อง</div>
+<div style="position: relative; height: 58px; background: #E4EDE9; border-radius: 6px">
+<div style="position: absolute; left: 0px; top: 9px; width: 400px; height: 16px; background: #8FB8AA; border-radius: 4px"></div>
+<div style="position: absolute; left: 0px; top: 31px; width: 425px; height: 16px; background: #0B4D40; border-radius: 4px"></div>
+</div>
+<div style="font-size: 30px">กำลังดำเนินการ</div>
+</div>
+<div style="display: grid; grid-template-columns: 500px 1000px 196px; gap: 16px; align-items: center; height: 58px; font-size: 32px">
+<div>3 คัดเลือกกลุ่มผ้าเป้าหมาย</div>
+<div style="position: relative; height: 58px; background: #E4EDE9; border-radius: 6px">
+<div style="position: absolute; left: 250px; top: 9px; width: 100px; height: 16px; background: #8FB8AA; border-radius: 4px"></div>
+<div style="position: absolute; left: 250px; top: 31px; width: 175px; height: 16px; background: #0B4D40; border-radius: 4px"></div>
+</div>
+<div style="font-size: 30px"><a href="#p20">เสร็จ ช้ากว่าแผน</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 500px 1000px 196px; gap: 16px; align-items: center; height: 58px; font-size: 32px">
+<div>4 เก็บข้อมูลก่อนปรับปรุง</div>
+<div style="position: relative; height: 58px; background: #E4EDE9; border-radius: 6px">
+<div style="position: absolute; left: 250px; top: 9px; width: 175px; height: 16px; background: #8FB8AA; border-radius: 4px"></div>
+<div style="position: absolute; left: 250px; top: 31px; width: 175px; height: 16px; background: #0B4D40; border-radius: 4px"></div>
+</div>
+<div style="font-size: 30px">เสร็จ ตามแผน</div>
+</div>
+<div style="display: grid; grid-template-columns: 500px 1000px 196px; gap: 16px; align-items: center; height: 58px; font-size: 32px">
+<div>5 วิเคราะห์ข้อมูลและกำหนดเป้าหมาย</div>
+<div style="position: relative; height: 58px; background: #E4EDE9; border-radius: 6px">
+<div style="position: absolute; left: 300px; top: 9px; width: 200px; height: 16px; background: #8FB8AA; border-radius: 4px"></div>
+<div style="position: absolute; left: 350px; top: 31px; width: 75px; height: 16px; background: #0B4D40; border-radius: 4px"></div>
+</div>
+<div style="font-size: 30px">กำลังดำเนินการ</div>
+</div>
+<div style="display: grid; grid-template-columns: 500px 1000px 196px; gap: 16px; align-items: center; height: 58px; font-size: 32px">
+<div>6 ออกแบบวิธีการปรับปรุง</div>
+<div style="position: relative; height: 58px; background: #E4EDE9; border-radius: 6px">
+<div style="position: absolute; left: 500px; top: 9px; width: 100px; height: 16px; background: #8FB8AA; border-radius: 4px"></div>
+<div style="position: absolute; left: 400px; top: 31px; width: 25px; height: 16px; background: #0B4D40; border-radius: 4px"></div>
+</div>
+<div style="font-size: 30px"><a href="#p20">เริ่มก่อนแผน</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 500px 1000px 196px; gap: 16px; align-items: center; height: 58px; font-size: 32px">
+<div>7 ทดลองปรับปรุงในหน่วยงานจริง</div>
+<div style="position: relative; height: 58px; background: #E4EDE9; border-radius: 6px">
+<div style="position: absolute; left: 600px; top: 9px; width: 100px; height: 16px; background: #8FB8AA; border-radius: 4px"></div>
+</div>
+<div style="font-size: 30px; color: #47605A">ยังไม่ถึงกำหนด</div>
+</div>
+<div style="display: grid; grid-template-columns: 500px 1000px 196px; gap: 16px; align-items: center; height: 58px; font-size: 32px">
+<div>8 เก็บข้อมูลหลังปรับปรุง</div>
+<div style="position: relative; height: 58px; background: #E4EDE9; border-radius: 6px">
+<div style="position: absolute; left: 700px; top: 9px; width: 100px; height: 16px; background: #8FB8AA; border-radius: 4px"></div>
+</div>
+<div style="font-size: 30px; color: #47605A">ยังไม่ถึงกำหนด</div>
+</div>
+<div style="display: grid; grid-template-columns: 500px 1000px 196px; gap: 16px; align-items: center; height: 58px; font-size: 32px">
+<div>9 วิเคราะห์ผลและสรุปผลการดำเนินงาน</div>
+<div style="position: relative; height: 58px; background: #E4EDE9; border-radius: 6px">
+<div style="position: absolute; left: 800px; top: 9px; width: 200px; height: 16px; background: #8FB8AA; border-radius: 4px"></div>
+</div>
+<div style="font-size: 30px; color: #47605A">ยังไม่ถึงกำหนด</div>
+</div>
+<div style="display: grid; grid-template-columns: 500px 1000px 196px; gap: 16px; align-items: center; height: 58px; font-size: 32px">
+<div>10 จัดทำรายงานและนำเสนอ</div>
+<div style="position: relative; height: 58px; background: #E4EDE9; border-radius: 6px">
+<div style="position: absolute; left: 0px; top: 9px; width: 1000px; height: 16px; background: #8FB8AA; border-radius: 4px"></div>
+<div style="position: absolute; left: 0px; top: 31px; width: 425px; height: 16px; background: #0B4D40; border-radius: 4px"></div>
+</div>
+<div style="font-size: 30px">กำลังดำเนินการ</div>
+</div>
+<div style="position: absolute; left: 516px; top: 44px; bottom: 0px; width: 1000px; display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); pointer-events: none">
+<div></div>
+<div style="border-left: 1px solid #A9BDB6"></div>
+<div style="border-left: 1px solid #A9BDB6"></div>
+<div style="border-left: 1px solid #A9BDB6"></div>
+<div style="border-left: 1px solid #A9BDB6"></div>
+<div style="border-left: 1px solid #A9BDB6"></div>
+<div style="border-left: 1px solid #A9BDB6"></div>
+<div style="border-left: 1px solid #A9BDB6"></div>
+<div style="border-left: 1px solid #A9BDB6"></div>
+<div style="border-left: 1px solid #A9BDB6"></div>
+</div>
+<div style="position: absolute; left: 940px; top: 44px; bottom: -8px; width: 3px; background: #12302A; pointer-events: none"></div>
+</div>
+<div style="display: flex; align-items: center; gap: 40px; font-size: 30px">
+<div style="display: flex; align-items: center; gap: 12px"><div style="width: 56px; height: 16px; background: #8FB8AA; border-radius: 4px"></div><span>แผน</span></div>
+<div style="display: flex; align-items: center; gap: 12px"><div style="width: 56px; height: 16px; background: #0B4D40; border-radius: 4px"></div><span>ผลการดำเนินงาน</span></div>
+<div style="display: flex; align-items: center; gap: 12px"><div style="width: 3px; height: 32px; background: #12302A"></div><span>ปัจจุบัน สัปดาห์ที่ 1 ของ ต.ค. 69</span></div>
+<div style="color: #47605A">ส่งรายงาน 12 ต.ค. | สอบ 15 ต.ค. | ส่งฉบับแก้ไข 22 ต.ค. 2569</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<span>MfE02/2026 • ความก้าวหน้าครั้งที่ 1</span>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">4</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p05" data-n="5" aria-label="หน้า 5 กลุ่มผ้าเป้าหมาย">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #F3F7F5; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #0E6B57">ผลการดำเนินงาน ขั้นตอนที่ 3 คัดเลือกกลุ่มผ้าเป้าหมาย</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ผ้ากลุ่ม A 17 ชนิด คิดเป็นร้อยละ 79.05 ของน้ำหนักผ้าในขอบเขต</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; gap: 56px">
+<div style="width: 600px; display: flex; flex-direction: column; align-items: center; justify-content: space-between">
+<div style="align-self: stretch; background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 20px; padding: 20px 32px">
+<div style="font-size: 30px; color: #47605A">ผ้าทั้งหมดของหน่วยงาน</div>
+<div style="font-size: 60px; line-height: 1.2; color: #0E6B57">239 <span style="font-size: 34px">ชนิด</span></div>
+<div style="font-size: 30px">1,336,772.50 กก. (ม.ค.–ส.ค. 2569)</div>
+</div>
+<svg width="40" height="30" viewBox="0 0 40 30" fill="none" stroke="#47605A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7l14 16 14-16"></path></svg>
+<div style="align-self: stretch; background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 20px; padding: 20px 32px">
+<div style="font-size: 30px; color: #47605A">ผ้าชิ้นเดี่ยวใน 6 โซนที่ศึกษา</div>
+<div style="font-size: 60px; line-height: 1.2"><a href="#p18">82</a> <span style="font-size: 34px; color: #0E6B57">ชนิด</span></div>
+<div style="font-size: 30px">448,015.00 กก. (ร้อยละ 33.51)</div>
+</div>
+<svg width="40" height="30" viewBox="0 0 40 30" fill="none" stroke="#47605A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7l14 16 14-16"></path></svg>
+<div style="align-self: stretch; background: #0B4D40; color: #FFFFFF; border-radius: 20px; padding: 20px 32px">
+<div style="font-size: 30px; color: #BFE3D8">ผ้ากลุ่ม A จากการวิเคราะห์แบบ ABC</div>
+<div style="font-size: 60px; line-height: 1.2"><a href="#p19" style="color: #FFD3A6">17</a> <span style="font-size: 34px">ชนิด</span></div>
+<div style="font-size: 30px">354,172.47 กก.</div>
+</div>
+</div>
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 20px; padding: 12px 32px; font-size: 32px">
+<div style="display: grid; grid-template-columns: 1fr 1.2fr 1.7fr 1.5fr 1.4fr; padding: 12px 0; border-bottom: 2px solid #12302A; font-size: 28px; color: #47605A; text-align: right">
+<div style="text-align: left">กลุ่ม</div><div>จำนวนชนิด</div><div>น้ำหนัก 8 เดือน (กก.)</div><div>ร้อยละของน้ำหนัก</div><div>ชนิดที่เสถียร</div>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1.2fr 1.7fr 1.5fr 1.4fr; padding: 12px 0; border-bottom: 1px solid #C9D8D2; text-align: right; color: #0B4D40; font-size: 38px">
+<div style="text-align: left">A</div><div>17</div><div>354,172.47</div><div><a href="#p18">79.05</a></div><div>17</div>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1.2fr 1.7fr 1.5fr 1.4fr; padding: 12px 0; border-bottom: 1px solid #C9D8D2; text-align: right">
+<div style="text-align: left">B</div><div>20</div><div>70,803.34</div><div>15.80</div><div>18</div>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1.2fr 1.7fr 1.5fr 1.4fr; padding: 12px 0; border-bottom: 1px solid #C9D8D2; text-align: right">
+<div style="text-align: left">C</div><div>45</div><div>23,039.19</div><div>5.14</div><div>37</div>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 1.2fr 1.7fr 1.5fr 1.4fr; padding: 12px 0; text-align: right">
+<div style="text-align: left">รวม</div><div>82</div><div>448,015.00</div><div>100.00</div><div>72</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 28px; color: #47605A">สัดส่วนน้ำหนักของผ้าชิ้นเดี่ยว 82 ชนิด</div>
+<div style="display: flex; gap: 4px; height: 64px; font-size: 30px; color: #FFFFFF">
+<div style="flex: 79.05 1 0; background: #0B4D40; border-radius: 8px 0 0 8px; display: flex; align-items: center; padding-left: 24px">A ร้อยละ 79.05</div>
+<div style="flex: 15.8 1 0; background: #3F7F70; display: flex; align-items: center; justify-content: center">B 15.80</div>
+<div style="flex: 5.14 1 0; background: #6B7F79; border-radius: 0 8px 8px 0; display: flex; align-items: center; justify-content: center">C</div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 32px">
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>เกณฑ์น้ำหนักสะสม: กลุ่ม A ไม่เกินร้อยละ 80 กลุ่ม B ไม่เกินร้อยละ 95 กลุ่ม C ส่วนที่เหลือ</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ผ้ากลุ่ม A ทั้ง 17 ชนิดอยู่ในกลุ่มเดิมครบทั้ง 8 เดือน จึงใช้เป็นกลุ่มผ้าเป้าหมาย</span></div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<span>MfE02/2026 • ความก้าวหน้าครั้งที่ 1</span>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">5</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p06" data-n="6" aria-label="หน้า 6 ข้อมูลก่อนปรับปรุงและเป้าหมาย">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #F3F7F5; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #0E6B57">ผลการดำเนินงาน ขั้นตอนที่ 4 และ 5 เก็บข้อมูลก่อนปรับปรุงและกำหนดเป้าหมาย</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ผ้าค้างพับเฉลี่ย 1,008.90 กก./วัน เป้าหมายคือไม่เกิน 853.34 กก./วัน</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; gap: 56px">
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 12px">
+<div style="font-size: 30px">น้ำหนักผ้าค้างพับ ณ เวลาปิดทำการ ของ 6 โซน 21 วันต่อเนื่อง (กก./วัน)</div>
+<div style="position: relative; height: 400px; margin-top: 20px">
+<div style="position: absolute; left: 0px; right: 240px; bottom: 0px; height: 400px; display: flex; align-items: flex-end; gap: 10px; border-bottom: 2px solid #12302A">
+<div style="flex: 1 1 0; height: 223px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 313px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 300px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 220px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 258px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 229px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 396px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 397px; background: #0B4D40; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 315px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 229px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 290px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 309px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 353px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 365px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 369px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 277px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 242px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 260px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 257px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 238px; background: #3F7F70; border-radius: 4px 4px 0 0"></div>
+<div style="flex: 1 1 0; height: 215px; background: #0B4D40; border-radius: 4px 4px 0 0"></div>
+</div>
+<div style="position: absolute; left: 0px; right: 0px; bottom: 288px; border-top: 3px solid #12302A"></div>
+<div style="position: absolute; right: 0px; bottom: 294px; width: 228px; font-size: 28px; line-height: 1.2">ค่าเฉลี่ย 1,008.90</div>
+<div style="position: absolute; left: 0px; right: 0px; bottom: 244px; border-top: 3px dashed #12302A"></div>
+<div style="position: absolute; right: 0px; bottom: 204px; width: 228px; font-size: 28px; line-height: 1.2">เป้าหมาย 853.34</div>
+<div style="position: absolute; right: 0px; bottom: 362px; width: 228px; font-size: 28px; line-height: 1.2; color: #47605A">สูงสุด 1,388.3</div>
+<div style="position: absolute; right: 0px; bottom: 150px; width: 228px; font-size: 28px; line-height: 1.2; color: #47605A">ต่ำสุด 751.9</div>
+</div>
+<div style="display: flex; gap: 10px; margin-right: 240px; font-size: 26px; text-align: center; color: #47605A">
+<div style="flex: 1 1 0">ศ</div><div style="flex: 1 1 0">ส</div><div style="flex: 1 1 0">อา</div><div style="flex: 1 1 0">จ</div><div style="flex: 1 1 0">อ</div><div style="flex: 1 1 0">พ</div><div style="flex: 1 1 0">พฤ</div><div style="flex: 1 1 0">ศ</div><div style="flex: 1 1 0">ส</div><div style="flex: 1 1 0">อา</div><div style="flex: 1 1 0">จ</div><div style="flex: 1 1 0">อ</div><div style="flex: 1 1 0">พ</div><div style="flex: 1 1 0">พฤ</div><div style="flex: 1 1 0">ศ</div><div style="flex: 1 1 0">ส</div><div style="flex: 1 1 0">อา</div><div style="flex: 1 1 0">จ</div><div style="flex: 1 1 0">อ</div><div style="flex: 1 1 0">พ</div><div style="flex: 1 1 0">พฤ</div>
+</div>
+<div style="font-size: 28px; color: #47605A">21 ส.ค. ถึง 10 ก.ย. 2569 | <a href="#p15">ค่ารายวันทั้ง 21 วัน</a></div>
+</div>
+<div style="width: 580px; display: flex; flex-direction: column; justify-content: center; gap: 20px">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 20px; padding: 20px 32px">
+<div style="font-size: 30px; color: #47605A">ค่าฐานก่อนปรับปรุง</div>
+<div style="font-size: 60px; line-height: 1.2"><a href="#p15">1,008.90</a> <span style="font-size: 32px; color: #0E6B57">กก./วัน</span></div>
+<div style="font-size: 30px">ส่วนเบี่ยงเบนมาตรฐาน 208.27 กก./วัน</div>
+</div>
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 20px; padding: 20px 32px">
+<div style="font-size: 30px; color: #47605A">เปรียบเทียบระหว่างวันในสัปดาห์</div>
+<div style="font-size: 44px; line-height: 1.3"><a href="#p16">F = 0.73, p = 0.6314</a></div>
+<div style="font-size: 30px">ยังไม่พบความแตกต่าง ใช้ค่าเฉลี่ยรวมเป็นค่าฐาน</div>
+</div>
+<div style="background: #0B4D40; color: #FFFFFF; border-radius: 20px; padding: 20px 32px">
+<div style="font-size: 30px; color: #BFE3D8">เป้าหมาย ลดลงไม่น้อยกว่า</div>
+<div style="font-size: 60px; line-height: 1.2"><a href="#p14" style="color: #FFD3A6">155.56</a> <span style="font-size: 32px">กก./วัน</span></div>
+<div style="font-size: 30px">ร้อยละ 15.42 ของค่าเฉลี่ย เหลือไม่เกิน 853.34</div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<span>MfE02/2026 • ความก้าวหน้าครั้งที่ 1</span>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">6</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p07" data-n="7" aria-label="หน้า 7 เวลาการพับของผ้ากลุ่ม A">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #F3F7F5; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #0E6B57">ผลการดำเนินงาน ขั้นตอนที่ 4 และ 5 บันทึกและวิเคราะห์ขั้นตอนการพับ</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">เวลาพับผ้ากลุ่ม A เป็นการพับจริงเพียงร้อยละ 29.7</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; gap: 56px">
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 22px">
+<div style="font-size: 36px">เวลาพับผ้ากลุ่ม A รวม <a href="#p21">1,600.5 นาที/วัน</a> แยกตามลักษณะงาน</div>
+<div style="display: grid; grid-template-columns: 290px 1fr; gap: 22px 24px; align-items: center; font-size: 36px">
+<div>ก รอและทำซ้ำ</div>
+<div style="display: flex; align-items: center; gap: 18px"><div style="flex-shrink: 0; width: 33px; height: 76px; background: #6B7F79; border-radius: 6px"></div><span>47.3 นาที/วัน (ร้อยละ 3.0)</span></div>
+<div>ข ถือและจัดวางผ้า</div>
+<div style="display: flex; align-items: center; gap: 18px"><div style="flex-shrink: 0; width: 468px; height: 76px; background: #0B4D40; border-radius: 6px"></div><span>679.9 (ร้อยละ 42.5)</span></div>
+<div>ค พับจริง</div>
+<div style="display: flex; align-items: center; gap: 18px"><div style="flex-shrink: 0; width: 327px; height: 76px; background: #3F7F70; border-radius: 6px"></div><span>474.9 (ร้อยละ 29.7)</span></div>
+<div>ง หยิบและวาง</div>
+<div style="display: flex; align-items: center; gap: 18px"><div style="flex-shrink: 0; width: 274px; height: 76px; background: #6B7F79; border-radius: 6px"></div><span>398.4 (ร้อยละ 24.9)</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; font-size: 34px; margin-top: 16px">
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>บันทึกด้วยแผนภูมิสองมือ 13 ชุด และแผนภูมิกระบวนการไหล 2 ชุด ครบ 17 ชนิด</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>กลุ่ม ข และ ค เป็นส่วนที่อุปกรณ์ช่วยพับลดเวลาได้</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>เป็นเวลาที่สังเกตได้ ยังไม่ใช่เวลามาตรฐาน</span></div>
+</div>
+</div>
+<div style="width: 580px; display: flex; flex-direction: column; justify-content: center; gap: 20px">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 20px; padding: 22px 32px">
+<div style="font-size: 30px; color: #47605A">อัตราร่วมของผ้ากลุ่ม A</div>
+<div style="font-size: 72px; line-height: 1.2"><a href="#p22">0.996</a> <span style="font-size: 32px; color: #0E6B57">กก. ต่อนาทีการพับ</span></div>
+<div style="font-size: 30px">1,594.35 กก./วัน หารด้วย 1,600.5 นาที/วัน</div>
+</div>
+<div style="background: #0B4D40; color: #FFFFFF; border-radius: 20px; padding: 22px 32px">
+<div style="font-size: 30px; color: #BFE3D8">เป้าหมาย 155.56 กก./วัน เทียบเท่าเวลาพับ</div>
+<div style="font-size: 72px; line-height: 1.2"><a href="#p22" style="color: #FFD3A6">156.2</a> <span style="font-size: 32px">นาที/วัน</span></div>
+<div style="font-size: 30px">ร้อยละ 9.8 ของเวลาพับผ้ากลุ่ม A</div>
+</div>
+<div style="font-size: 30px; color: #47605A">ใช้ 156.2 นาที/วัน เป็นค่าอ้างอิงของเวลาที่การปรับปรุงต้องลดได้</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<span>MfE02/2026 • ความก้าวหน้าครั้งที่ 1</span>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">7</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p08" data-n="8" aria-label="หน้า 8 ผ้าและเงื่อนไขการออกแบบ">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #F3F7F5; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #0E6B57">ผลการดำเนินงาน ขั้นตอนที่ 6 ออกแบบวิธีการปรับปรุง (เริ่มก่อนแผน)</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ออกแบบเครื่องช่วยพับตั้งโต๊ะสำหรับผ้า 4 ชนิด</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; gap: 48px">
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 22px">
+<div style="font-size: 34px"><a href="#p23">ผ้าที่เลือก</a> เป็นผ้าผืนเรียบ เรียงตามเวลาถือ จัดวาง และพับ (กลุ่ม ข และ ค)</div>
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 20px; padding: 10px 32px; font-size: 38px">
+<div style="display: grid; grid-template-columns: 2.6fr 1fr 1fr 1fr; padding: 12px 0; border-bottom: 2px solid #12302A; font-size: 28px; line-height: 1.25; color: #47605A; text-align: right; align-items: end">
+<div style="text-align: left">ชนิดผ้า</div><div>ข และ ค<br>(นาที/วัน)</div><div>จำนวน<br>(ชิ้น/วัน)</div><div>เวลาพับ<br>(วินาที/ชิ้น)</div>
+</div>
+<div style="display: grid; grid-template-columns: 2.6fr 1fr 1fr 1fr; padding: 18px 0; border-bottom: 1px solid #C9D8D2; text-align: right">
+<div style="text-align: left">ผ้าอ้อมใหญ่36"X36"</div><div>122.5</div><div>678.6</div><div>14.44</div>
+</div>
+<div style="display: grid; grid-template-columns: 2.6fr 1fr 1fr 1fr; padding: 18px 0; border-bottom: 1px solid #C9D8D2; text-align: right">
+<div style="text-align: left">ปลอกหมอนใหญ่สีขาว18"X27"</div><div>93.4</div><div>698.5</div><div>11.03</div>
+</div>
+<div style="display: grid; grid-template-columns: 2.6fr 1fr 1fr 1fr; padding: 18px 0; border-bottom: 1px solid #C9D8D2; text-align: right">
+<div style="text-align: left">ผ้าเช็ดตัว24"x48"</div><div>52.9</div><div>312.4</div><div>15.61</div>
+</div>
+<div style="display: grid; grid-template-columns: 2.6fr 1fr 1fr 1fr; padding: 18px 0; border-bottom: 1px solid #C9D8D2; text-align: right">
+<div style="text-align: left">ผ้าเช็ดตัวสีขาว12"X12"</div><div>35.2</div><div>2,030.1</div><div>3.02</div>
+</div>
+<div style="display: grid; grid-template-columns: 2.6fr 1fr 1fr 1fr; padding: 14px 0; text-align: right; color: #0B4D40">
+<div style="text-align: left">รวมผ้า 4 ชนิด</div><div>304.0</div><div></div><div></div>
+</div>
+</div>
+<div style="font-size: 30px; color: #47605A">ค่าอ้างอิงของเป้าหมายคือ 156.2 นาที/วัน</div>
+</div>
+<div style="width: 640px; display: flex; flex-direction: column; justify-content: center; gap: 20px">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 20px; padding: 22px 32px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 38px"><a href="#p24">เงื่อนไขการออกแบบ</a></div>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 32px">
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>วางบนโต๊ะพับ ไม่เกิน 100 x 100 x 100 ซม.</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ผู้ปฏิบัติงาน 1 คน พนักงานหมุนเวียนใช้ได้ทุกคน</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>รอบเวลาสั้นกว่าเวลาพับปัจจุบัน</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>งบประมาณ 2,300 บาทต่อเครื่อง</span></div>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 20px; padding: 22px 32px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 38px"><a href="#p25">การคัดเลือกแนวคิด</a></div>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 32px">
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>แยก 5 ฟังก์ชัน: ป้อนผ้า พับ นำผ้าออก นับ รวมเซต</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ฟังก์ชันละ 3 ทางเลือกขึ้นไป แยกตามชนิดผ้า</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ให้คะแนนด้วย 6 เกณฑ์ ถ่วงน้ำหนัก คะแนนเต็ม 5.00</span></div>
+</div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<span>MfE02/2026 • ความก้าวหน้าครั้งที่ 1</span>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">8</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p09" data-n="9" aria-label="หน้า 9 หลักการทำงานของเครื่องช่วยพับ">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #F3F7F5; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #0E6B57">ผลการดำเนินงาน ขั้นตอนที่ 6 แนวคิดที่เลือก</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">แผ่นพับขับด้วยเท้าเหยียบ พับทบสุดท้าย ปล่อยผ้าลงช่องรับ และนับจำนวน</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 20px">
+<div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 16px; height: 300px; display: flex; align-items: center; justify-content: center"><img src="assets/machine-diaper-1.png" alt="เครื่องในท่าพร้อมวางผ้า" style="width: 316px; height: 290px; object-fit: contain"></div>
+<div style="font-size: 34px; line-height: 1.35"><span style="color: #0E6B57">1</span> วางผ้าบนแท่น ชิดขอบกั้น 2 ด้าน</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 16px; height: 300px; display: flex; align-items: center; justify-content: center"><img src="assets/machine-diaper-2.png" alt="แผ่นพับหมุนขึ้น" style="width: 316px; height: 290px; object-fit: contain"></div>
+<div style="font-size: 34px; line-height: 1.35"><span style="color: #0E6B57">2</span> เหยียบคันเหยียบ ลวดสลิงดึงแผ่นพับให้หมุน</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 16px; height: 300px; display: flex; align-items: center; justify-content: center"><img src="assets/machine-diaper-3.png" alt="แผ่นพับทบผ้าลงบนบานรับ" style="width: 316px; height: 290px; object-fit: contain"></div>
+<div style="font-size: 34px; line-height: 1.35"><span style="color: #0E6B57">3</span> แผ่นพับทบผ้าลงบนบานรับ ที่ประมาณ 170 องศา หมุดปลดกลอน</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 16px; height: 300px; display: flex; align-items: center; justify-content: center"><img src="assets/machine-diaper-4.png" alt="บานรับเปิดลง" style="width: 316px; height: 290px; object-fit: contain"></div>
+<div style="font-size: 34px; line-height: 1.35"><span style="color: #0E6B57">4</span> บานรับเปิดลง ผ้าที่พับแล้วตกซ้อนในช่องรับใต้แท่น</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 16px; height: 300px; display: flex; align-items: center; justify-content: center"><img src="assets/machine-diaper-5.png" alt="แผ่นพับหมุนกลับ" style="width: 316px; height: 290px; object-fit: contain"></div>
+<div style="font-size: 34px; line-height: 1.35"><span style="color: #0E6B57">5</span> ปล่อยเท้า สปริงดึงแผ่นพับกลับ บานรับปิด ล้อนับเดิน 1 ฟัน</div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; font-size: 38px; line-height: 1.35">
+<div style="background: #0B4D40; color: #FFFFFF; border-radius: 16px; padding: 22px 28px">ผู้ปฏิบัติงานพับทบแรกด้วยมือ เครื่องพับทบสุดท้าย</div>
+<div style="background: #0B4D40; color: #FFFFFF; border-radius: 16px; padding: 22px 28px">กระดิ่งดังทุก 10 ชิ้น มัดเซตได้โดยไม่ต้องนับ</div>
+<div style="background: #0B4D40; color: #FFFFFF; border-radius: 16px; padding: 22px 28px">ไม่ใช้ไฟฟ้าหรือลมอัด ใช้ได้ทุกจุดพับ</div>
+</div>
+<div style="font-size: 28px; color: #47605A">ภาพจาก <a href="#p26">แบบจำลอง 3 มิติ</a> ของเครื่องสำหรับผ้าอ้อมใหญ่36"X36" เป็นแบบแนวคิด ยังไม่ใช่แบบสำหรับสร้าง</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<span>MfE02/2026 • ความก้าวหน้าครั้งที่ 1</span>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">9</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p10" data-n="10" aria-label="หน้า 10 เครื่องช่วยพับ 4 เครื่อง">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #F3F7F5; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #0E6B57">ผลการดำเนินงาน ขั้นตอนที่ 6 แบบจำลอง 3 มิติและผลที่คาด</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">เครื่อง 4 เครื่อง คาดว่าลดเวลาพับได้ 131–176 นาที/วัน</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 18px">
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 16px; padding: 16px 24px 18px; display: flex; flex-direction: column; gap: 8px">
+<img src="assets/machine-towel-12x12.png" alt="เครื่องสำหรับผ้าเช็ดตัวสีขาว 12 x 12 นิ้ว" style="width: 100%; height: 260px; object-fit: contain">
+<div style="font-size: 34px; color: #0B4D40">ผ้าเช็ดตัวสีขาว12"X12"</div>
+<div style="font-size: 30px">ขนาด 39.7 x 50.5 x 30.8 ซม.</div>
+<div style="display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: 30px">
+<div style="color: #47605A">มวล (กก.)</div><div style="text-align: right">8.4</div>
+<div style="color: #47605A">เวลาปัจจุบัน (วินาที)</div><div style="text-align: right">3.02</div>
+<div style="color: #47605A">เวลาที่คาด (วินาที)</div><div style="text-align: right">1.3–1.8</div>
+<div style="color: #47605A">ลดได้ (นาที/วัน)</div><div style="text-align: right; color: #0B4D40">41–58</div>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 16px; padding: 16px 24px 18px; display: flex; flex-direction: column; gap: 8px">
+<img src="assets/machine-pillow.png" alt="เครื่องสำหรับปลอกหมอนใหญ่สีขาว 18 x 27 นิ้ว" style="width: 100%; height: 260px; object-fit: contain">
+<div style="font-size: 34px; color: #0B4D40">ปลอกหมอนใหญ่สีขาว18"X27"</div>
+<div style="font-size: 30px">ขนาด 64.8 x 58.4 x 42.3 ซม.</div>
+<div style="display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: 30px">
+<div style="color: #47605A">มวล (กก.)</div><div style="text-align: right">11.9</div>
+<div style="color: #47605A">เวลาปัจจุบัน (วินาที)</div><div style="text-align: right">11.03</div>
+<div style="color: #47605A">เวลาที่คาด (วินาที)</div><div style="text-align: right">6.5–8.0</div>
+<div style="color: #47605A">ลดได้ (นาที/วัน)</div><div style="text-align: right; color: #0B4D40">35–52</div>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 16px; padding: 16px 24px 18px; display: flex; flex-direction: column; gap: 8px">
+<img src="assets/machine-diaper-1.png" alt="เครื่องสำหรับผ้าอ้อมใหญ่ 36 x 36 นิ้ว" style="width: 100%; height: 260px; object-fit: contain">
+<div style="font-size: 34px; color: #0B4D40">ผ้าอ้อมใหญ่36"X36"</div>
+<div style="font-size: 30px">ขนาด 55.0 x 44.2 x 42.3 ซม.</div>
+<div style="display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: 30px">
+<div style="color: #47605A">มวล (กก.)</div><div style="text-align: right">9.8</div>
+<div style="color: #47605A">เวลาปัจจุบัน (วินาที)</div><div style="text-align: right">14.44</div>
+<div style="color: #47605A">เวลาที่คาด (วินาที)</div><div style="text-align: right">10.9–11.4</div>
+<div style="color: #47605A">ลดได้ (นาที/วัน)</div><div style="text-align: right; color: #0B4D40">34–40</div>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 16px; padding: 16px 24px 18px; display: flex; flex-direction: column; gap: 8px">
+<img src="assets/machine-towel-24x48.png" alt="เครื่องสำหรับผ้าเช็ดตัว 24 x 48 นิ้ว" style="width: 100%; height: 260px; object-fit: contain">
+<div style="font-size: 34px; color: #0B4D40">ผ้าเช็ดตัว24"x48"</div>
+<div style="font-size: 30px">ขนาด 70.2 x 51.8 x 59.8 ซม.</div>
+<div style="display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; font-size: 30px">
+<div style="color: #47605A">มวล (กก.)</div><div style="text-align: right">13.3</div>
+<div style="color: #47605A">เวลาปัจจุบัน (วินาที)</div><div style="text-align: right">15.61</div>
+<div style="color: #47605A">เวลาที่คาด (วินาที)</div><div style="text-align: right">10.6–11.6</div>
+<div style="color: #47605A">ลดได้ (นาที/วัน)</div><div style="text-align: right; color: #0B4D40">21–26</div>
+</div>
+</div>
+</div>
+<div style="background: #0B4D40; color: #FFFFFF; border-radius: 16px; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; gap: 32px">
+<div style="font-size: 36px">รวมคาดว่าลดได้ <a href="#p27" style="color: #FFD3A6">131–176 นาที/วัน</a> เทียบกับค่าอ้างอิง 156.2 นาที/วัน</div>
+<div style="font-size: 30px; color: #BFE3D8">ค่าประมาณ ยังไม่ได้ทดสอบ</div>
+</div>
+<div style="font-size: 28px; color: #47605A">ขนาดและมวลจาก <a href="#p26">แบบจำลอง 3 มิติ</a> ไม่รวมชุดคันเหยียบ | <a href="#p28">แรงเหยียบและต้นทุนวัสดุ</a></div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<span>MfE02/2026 • ความก้าวหน้าครั้งที่ 1</span>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">10</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p11" data-n="11" aria-label="หน้า 11 สรุปความก้าวหน้า">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #F3F7F5; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #0E6B57">สรุปความก้าวหน้า ถึงสัปดาห์ที่ 1 ของเดือนตุลาคม 2569</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ได้ค่าฐาน เป้าหมาย กลุ่มผ้าเป้าหมาย และแนวคิดเครื่องช่วยพับ</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 20px">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 20px; padding: 8px 32px; font-size: 34px; line-height: 1.35">
+<div style="display: grid; grid-template-columns: 470px 1fr 230px; gap: 24px; padding: 12px 0; border-bottom: 2px solid #12302A; font-size: 28px; color: #47605A">
+<div>ขั้นตอน</div><div>ผลที่ได้</div><div>สถานะ</div>
+</div>
+<div style="display: grid; grid-template-columns: 470px 1fr 230px; gap: 24px; padding: 14px 0; border-bottom: 1px solid #C9D8D2; align-items: center">
+<div>1 ศึกษาสภาพปัจจุบัน</div><div>กระบวนการพับเป็นคอขวด กำหนดขอบเขต 6 จาก 13 โซนการพับ</div><div style="color: #0B4D40">เสร็จ</div>
+</div>
+<div style="display: grid; grid-template-columns: 470px 1fr 230px; gap: 24px; padding: 14px 0; border-bottom: 1px solid #C9D8D2; align-items: center">
+<div>3 คัดเลือกกลุ่มผ้าเป้าหมาย</div><div>ผ้ากลุ่ม A 17 ชนิด ร้อยละ 79.05 ของน้ำหนักผ้าในขอบเขต</div><div style="color: #0B4D40">เสร็จ</div>
+</div>
+<div style="display: grid; grid-template-columns: 470px 1fr 230px; gap: 24px; padding: 14px 0; border-bottom: 1px solid #C9D8D2; align-items: center">
+<div>4 เก็บข้อมูลก่อนปรับปรุง</div><div>ผ้าค้างพับ 21 วัน เฉลี่ย 1,008.90 กก./วัน และขั้นตอนการพับของผ้ากลุ่ม A ครบ 17 ชนิด</div><div style="color: #0B4D40">เสร็จ</div>
+</div>
+<div style="display: grid; grid-template-columns: 470px 1fr 230px; gap: 24px; padding: 14px 0; border-bottom: 1px solid #C9D8D2; align-items: center">
+<div>5 วิเคราะห์ข้อมูลและกำหนดเป้าหมาย</div><div>เป้าหมายลดผ้าค้างพับ 155.56 กก./วัน เทียบเท่าเวลาพับ 156.2 นาที/วัน</div><div>กำลังดำเนินการ</div>
+</div>
+<div style="display: grid; grid-template-columns: 470px 1fr 230px; gap: 24px; padding: 14px 0; align-items: center">
+<div>6 ออกแบบวิธีการปรับปรุง</div><div>แนวคิดเครื่องช่วยพับ 4 เครื่อง พร้อมแบบจำลอง 3 มิติ คาดว่าลดได้ 131–176 นาที/วัน</div><div>เริ่มก่อนแผน</div>
+</div>
+</div>
+<div style="background: #0B4D40; color: #FFFFFF; border-radius: 20px; padding: 22px 32px; display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 30px; color: #BFE3D8">งานช่วงถัดไป</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; font-size: 32px; line-height: 1.35">
+<div style="display: flex; gap: 14px"><span style="color: #BFE3D8">1</span><span>แก้ปัญหาที่แบบจำลอง 3 มิติพบ และออกแบบรายละเอียด</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #BFE3D8">2</span><span>งานเสริมสำหรับเสื้อกาวน์สีขาว เพื่อให้ถึงเป้าหมาย</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #BFE3D8">3</span><span>ทดลองในหน่วยงานจริง และเก็บข้อมูลหลังปรับปรุง 21 วัน</span></div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<span>MfE02/2026 • ความก้าวหน้าครั้งที่ 1</span>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">11</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p12" data-n="12" aria-label="หน้า 12 ปัญหา อุปสรรค และแนวทางแก้ไข">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #F3F7F5; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #0E6B57">ปัญหา อุปสรรค และแนวทางแก้ไข</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ปัญหาที่พบ 6 เรื่อง และแนวทางแก้ไข</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center">
+<div style="background: #FFFFFF; border: 2px solid #C9D8D2; border-radius: 20px; padding: 8px 32px; font-size: 34px; line-height: 1.35">
+<div style="display: grid; grid-template-columns: 40px 1fr 1fr; gap: 24px; padding: 12px 0; border-bottom: 2px solid #12302A; font-size: 28px; color: #47605A">
+<div></div><div>ปัญหาและอุปสรรค</div><div>แนวทางแก้ไข</div>
+</div>
+<div style="display: grid; grid-template-columns: 40px 1fr 1fr; gap: 24px; padding: 13px 0; border-bottom: 1px solid #C9D8D2; align-items: center">
+<div style="color: #0E6B57">1</div><div>ผ้าค้างพับปนกันหลายชนิด ชั่งแยกตามชนิดผ้าไม่ได้</div><div>ชั่งรวมตามโซน และจัดลำดับผ้าเป้าหมายจากข้อมูลการเบิก 8 เดือน</div>
+</div>
+<div style="display: grid; grid-template-columns: 40px 1fr 1fr; gap: 24px; padding: 13px 0; border-bottom: 1px solid #C9D8D2; align-items: center">
+<div style="color: #0E6B57">2</div><div>วิธีพับและจำนวนต่อเซตที่หน้างานต่างจากมาตรฐานการปฏิบัติงานในผ้า 2 ชนิด</div><div>เก็บข้อมูลหน้างาน หน่วยงานยืนยันว่ายอมรับได้ จึง <a href="#p24">ออกแบบตามวิธีหน้างาน</a></div>
+</div>
+<div style="display: grid; grid-template-columns: 40px 1fr 1fr; gap: 24px; padding: 13px 0; border-bottom: 1px solid #C9D8D2; align-items: center">
+<div style="color: #0E6B57">3</div><div>เครื่อง 2 เครื่อง <a href="#p28">เกินงบ 2,300 บาท และแรงเหยียบเกิน 90 นิวตัน</a></div><div>ลดคะแนนด้านต้นทุนตามจริง และปรับแบบหลังการสอบความก้าวหน้า</div>
+</div>
+<div style="display: grid; grid-template-columns: 40px 1fr 1fr; gap: 24px; padding: 13px 0; border-bottom: 1px solid #C9D8D2; align-items: center">
+<div style="color: #0E6B57">4</div><div>แบบจำลอง 3 มิติพบ <a href="#p26">ปัญหาของกลไก</a> ที่ยังไม่ได้แก้</div><div>แก้ในขั้นออกแบบรายละเอียด ก่อนสร้างเครื่องจริง</div>
+</div>
+<div style="display: grid; grid-template-columns: 40px 1fr 1fr; gap: 24px; padding: 13px 0; border-bottom: 1px solid #C9D8D2; align-items: center">
+<div style="color: #0E6B57">5</div><div>เวลาที่คาดว่าลดได้ <a href="#p27">ค่าต่ำสุดยังขาดประมาณ 25 นาที/วัน</a> และเป็นค่าประมาณ</div><div>เพิ่มงานเสริมสำหรับเสื้อกาวน์สีขาว และจับเวลากับเครื่องจริง</div>
+</div>
+<div style="display: grid; grid-template-columns: 40px 1fr 1fr; gap: 24px; padding: 13px 0; align-items: center">
+<div style="color: #0E6B57">6</div><div>ผ้าแต่ละชนิดมาไม่พร้อมกัน และ 1 คนพับผ้าหลายชนิดในกองเดียว เครื่อง 4 เครื่องจึงต้องใช้ 4 คน</div><div>พิจารณาเครื่องเดียวที่พับได้ทั้ง 4 ชนิด หลังการสอบความก้าวหน้า</div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<span>MfE02/2026 • ความก้าวหน้าครั้งที่ 1</span>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">12</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p13" data-n="13" aria-label="หน้า 13 Backup">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #0B4D40; color: #FFFFFF; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #BFE3D8">MfE02/2026 ความก้าวหน้าครั้งที่ 1</div>
+<h1 style="margin: 0; font-size: 64px; font-weight: 400; line-height: 1.25">Backup</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 72px">
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 30px; color: #BFE3D8; padding-bottom: 8px; border-bottom: 2px solid #3F7F70">หน้าที่นำเสนอ</div>
+<div style="display: flex; flex-direction: column; gap: 9px; font-size: 32px">
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">1</span><a href="#p01">ชื่อโครงงาน</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">2</span><a href="#p02">ความเป็นมาของปัญหา</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">3</span><a href="#p03">วัตถุประสงค์ ขอบเขต และประโยชน์</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">4</span><a href="#p04">แผนการดำเนินงาน</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">5</span><a href="#p05">กลุ่มผ้าเป้าหมาย</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">6</span><a href="#p06">ข้อมูลก่อนปรับปรุงและเป้าหมาย</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">7</span><a href="#p07">เวลาการพับของผ้ากลุ่ม A</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">8</span><a href="#p08">ผ้าและเงื่อนไขการออกแบบ</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">9</span><a href="#p09">หลักการทำงานของเครื่องช่วยพับ</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">10</span><a href="#p10">เครื่องช่วยพับ 4 เครื่อง</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">11</span><a href="#p11">สรุปความก้าวหน้า</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">12</span><a href="#p12">ปัญหา อุปสรรค และแนวทางแก้ไข</a></div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="font-size: 30px; color: #BFE3D8; padding-bottom: 8px; border-bottom: 2px solid #3F7F70">ข้อมูลประกอบ</div>
+<div style="display: flex; flex-direction: column; gap: 3px; font-size: 30px">
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">14</span><a href="#p14">ที่มาของ 155.56 กก./วัน</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">15</span><a href="#p15">ข้อมูลผ้าค้างพับ 21 วัน</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">16</span><a href="#p16">การเปรียบเทียบระหว่างวันในสัปดาห์</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">17</span><a href="#p17">โซนการพับ 13 โซน</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">18</span><a href="#p18">การคัดกรองผ้าและการวิเคราะห์แบบ ABC</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">19</span><a href="#p19">ผ้ากลุ่ม A 17 ชนิด</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">20</span><a href="#p20">สถานะเทียบแผนรายขั้นตอน</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">21</span><a href="#p21">เวลาการพับรายชนิดผ้า</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">22</span><a href="#p22">ที่มาของ 0.996 และ 156.2</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">23</span><a href="#p23">การเลือกผ้าสำหรับเครื่องช่วยพับ</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">24</span><a href="#p24">เงื่อนไขการออกแบบ</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">25</span><a href="#p25">เกณฑ์และคะแนนของแนวคิด</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">26</span><a href="#p26">แบบจำลอง 3 มิติ</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">27</span><a href="#p27">เวลาที่คาดว่าลดได้</a></div>
+<div style="display: flex; gap: 20px"><span style="width: 44px; text-align: right; color: #BFE3D8">28</span><a href="#p28">แรงเหยียบและต้นทุนวัสดุ</a></div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #BFE3D8">
+<span>กดหัวข้อเพื่อไปยังหน้านั้น</span>
+<span style="font-size: 30px; color: #FFFFFF">13</span>
+</div>
+</div>
+</section>
+<section class="slide" id="p14" data-n="14" aria-label="หน้า 14 ที่มาของ 155.56">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 3 และ 6</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ที่มาของเป้าหมาย 155.56 กก./วัน</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; gap: 48px">
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 22px">
+<div style="font-size: 32px">ใช้ผลต่างที่น้อยที่สุดที่ตรวจพบได้ (MDI) เป็นขนาดขั้นต่ำของการลดผ้าค้างพับ เพื่อให้แยกผลของการปรับปรุงออกจากความแปรปรวนรายวันได้</div>
+<div style="background: #F3F7F5; border-radius: 20px; padding: 28px 36px; display: flex; flex-direction: column; gap: 12px; font-size: 38px">
+<div>MDI = (Z1 + Z2) x SD x รากที่สองของ (2 / n)</div>
+<div style="padding-left: 86px">= (1.6449 + 0.8416) x 202.73 x รากที่สองของ (2 / 21)</div>
+<div style="padding-left: 86px">= 2.4865 x 202.73 x 0.3086</div>
+<div style="padding-left: 86px; font-size: 56px; color: #0E6B57">= 155.56 กก./วัน</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 34px">
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>คิดเป็นร้อยละ 15.42 ของค่าเฉลี่ยก่อนปรับปรุง 1,008.90 กก./วัน</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ค่าเฉลี่ยหลังปรับปรุงต้องไม่เกิน 1,008.90 - 155.56 = 853.34 กก./วัน</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ผลรวมของค่า Z ปัดเป็น 2.49 ในรายงาน อ้างอิง Bloom (1995)</span></div>
+</div>
+</div>
+<div style="width: 700px; display: flex; flex-direction: column; justify-content: center; gap: 20px">
+<div style="background: #F3F7F5; border-radius: 20px; padding: 10px 32px; font-size: 32px; line-height: 1.35">
+<div style="display: grid; grid-template-columns: 250px 1fr; gap: 20px; padding: 14px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #0E6B57">ระดับนัยสำคัญ 0.05 ด้านเดียว</div><div>สนใจเฉพาะการลดลงของผ้าค้างพับ ทิศทางกำหนดไว้ล่วงหน้า (Z1 = 1.6449)</div></div>
+<div style="display: grid; grid-template-columns: 250px 1fr; gap: 20px; padding: 14px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #0E6B57">อำนาจการทดสอบ ร้อยละ 80</div><div>เกณฑ์มาตรฐานของการออกแบบการทดลอง (Z2 = 0.8416)</div></div>
+<div style="display: grid; grid-template-columns: 250px 1fr; gap: 20px; padding: 14px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #0E6B57">SD = 202.73 กก./วัน</div><div>ส่วนเบี่ยงเบนมาตรฐานของผ้าค้างพับรายวันทุกโซน ในช่วงเวลาเดียวกัน</div></div>
+<div style="display: grid; grid-template-columns: 250px 1fr; gap: 20px; padding: 14px 0"><div style="color: #0E6B57">n = 21 วันต่อช่วง</div><div>เท่ากับจำนวนวันที่เก็บข้อมูลก่อนปรับปรุง</div></div>
+</div>
+<div style="font-size: 30px; line-height: 1.35; color: #47605A">ถ้าใช้ SD ของ 6 โซนในขอบเขต (208.27 กก./วัน) จะได้ 159.82 กก./วัน หรือร้อยละ 15.84 ซึ่งใกล้เคียงกัน</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p03">3 วัตถุประสงค์</a><a href="#p06">6 ข้อมูลก่อนปรับปรุงและเป้าหมาย</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">14</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p15" data-n="15" aria-label="หน้า 15 ข้อมูลผ้าค้างพับ 21 วัน">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 2, 3 และ 6</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ที่มาของ 1,008.90 และ 853.34 กก./วัน</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; gap: 48px">
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 14px">
+<div style="font-size: 30px">น้ำหนักผ้าค้างพับ ณ เวลาปิดทำการ รวม 6 โซนในขอบเขต (กก./วัน)</div>
+<div style="background: #F3F7F5; border-radius: 20px; padding: 8px 32px; font-size: 38px">
+<div style="display: grid; grid-template-columns: 1.3fr 1fr 1.2fr 1fr 1.3fr; padding: 12px 0; border-bottom: 2px solid #12302A; font-size: 28px; color: #47605A; text-align: right">
+<div style="text-align: left">วัน</div><div>21–27 ส.ค.</div><div>28 ส.ค.–3 ก.ย.</div><div>4–10 ก.ย.</div><div>เฉลี่ยของวัน</div>
+</div>
+<div style="display: grid; grid-template-columns: 1.3fr 1fr 1.2fr 1fr 1.3fr; padding: 10px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ศุกร์</div><div>780.0</div><div>1,388.3</div><div>1,292.3</div><div style="color: #0E6B57">1,153.53</div></div>
+<div style="display: grid; grid-template-columns: 1.3fr 1fr 1.2fr 1fr 1.3fr; padding: 10px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">เสาร์</div><div>1,096.5</div><div>1,102.1</div><div>969.2</div><div style="color: #0E6B57">1,055.93</div></div>
+<div style="display: grid; grid-template-columns: 1.3fr 1fr 1.2fr 1fr 1.3fr; padding: 10px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">อาทิตย์</div><div>1,051.0</div><div>800.2</div><div>847.2</div><div style="color: #0E6B57">899.47</div></div>
+<div style="display: grid; grid-template-columns: 1.3fr 1fr 1.2fr 1fr 1.3fr; padding: 10px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">จันทร์</div><div>770.9</div><div>1,014.0</div><div>911.3</div><div style="color: #0E6B57">898.73</div></div>
+<div style="display: grid; grid-template-columns: 1.3fr 1fr 1.2fr 1fr 1.3fr; padding: 10px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">อังคาร</div><div>901.8</div><div>1,080.1</div><div>897.9</div><div style="color: #0E6B57">959.93</div></div>
+<div style="display: grid; grid-template-columns: 1.3fr 1fr 1.2fr 1fr 1.3fr; padding: 10px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">พุธ</div><div>800.3</div><div>1,236.8</div><div>832.2</div><div style="color: #0E6B57">956.43</div></div>
+<div style="display: grid; grid-template-columns: 1.3fr 1fr 1.2fr 1fr 1.3fr; padding: 10px 0; text-align: right"><div style="text-align: left">พฤหัสบดี</div><div>1,384.8</div><div>1,278.0</div><div>751.9</div><div style="color: #0E6B57">1,138.23</div></div>
+</div>
+<div style="font-size: 28px; color: #47605A">21 ส.ค. ถึง 10 ก.ย. 2569 ชั่งรวมตามโซน ใช้ 443 รายการชั่ง</div>
+</div>
+<div style="width: 620px; display: flex; flex-direction: column; justify-content: center; gap: 20px">
+<div style="background: #F3F7F5; border-radius: 20px; padding: 10px 32px; font-size: 36px">
+<div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #C9D8D2"><span>ค่าเฉลี่ย</span><span style="color: #0E6B57">1,008.90</span></div>
+<div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #C9D8D2"><span>ส่วนเบี่ยงเบนมาตรฐาน</span><span>208.27</span></div>
+<div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #C9D8D2"><span>ต่ำสุด และ สูงสุด</span><span>751.9 และ 1,388.3</span></div>
+<div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #C9D8D2"><span>สัมประสิทธิ์การแปรผัน</span><span>ร้อยละ 20.64</span></div>
+<div style="display: flex; justify-content: space-between; padding: 12px 0"><span>รวม 21 วัน</span><span>21,186.8 กก.</span></div>
+</div>
+<div style="background: #0B4D40; color: #FFFFFF; border-radius: 20px; padding: 22px 32px">
+<div style="font-size: 30px; color: #BFE3D8">ค่าเฉลี่ยหลังปรับปรุงต้องไม่เกิน</div>
+<div style="font-size: 44px; line-height: 1.3">1,008.90 - 155.56 = 853.34</div>
+<div style="font-size: 30px">กก./วัน | <a href="#p14" style="color: #FFD3A6">ที่มาของ 155.56</a></div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p02">2 ความเป็นมา</a><a href="#p03">3 วัตถุประสงค์</a><a href="#p06">6 ข้อมูลก่อนปรับปรุงและเป้าหมาย</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">15</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p16" data-n="16" aria-label="หน้า 16 ANOVA วันในสัปดาห์">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 6</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ที่มาของ F = 0.73 และ p = 0.6314</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 20px">
+<div style="font-size: 32px">การวิเคราะห์ความแปรปรวนแบบทางเดียว เปรียบเทียบผ้าค้างพับของ 7 วันในสัปดาห์ วันละ 3 ค่า (F = MST / MSE)</div>
+<div style="background: #F3F7F5; border-radius: 20px; padding: 8px 32px; font-size: 36px">
+<div style="display: grid; grid-template-columns: 2.2fr 1.4fr 0.6fr 1.3fr 0.8fr 0.9fr; padding: 12px 0; border-bottom: 2px solid #12302A; font-size: 28px; color: #47605A; text-align: right">
+<div style="text-align: left">แหล่งความแปรปรวน</div><div>SS</div><div>df</div><div>MS</div><div>F</div><div>p</div>
+</div>
+<div style="display: grid; grid-template-columns: 2.2fr 1.4fr 0.6fr 1.3fr 0.8fr 0.9fr; padding: 12px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ระหว่างวันในสัปดาห์</div><div>207,362.64</div><div>6</div><div>34,560.44</div><div style="color: #0E6B57">0.73</div><div style="color: #0E6B57">0.6314</div></div>
+<div style="display: grid; grid-template-columns: 2.2fr 1.4fr 0.6fr 1.3fr 0.8fr 0.9fr; padding: 12px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ภายในวันเดียวกัน</div><div>660,200.07</div><div>14</div><div>47,157.15</div><div></div><div></div></div>
+<div style="display: grid; grid-template-columns: 2.2fr 1.4fr 0.6fr 1.3fr 0.8fr 0.9fr; padding: 12px 0; text-align: right"><div style="text-align: left">รวม</div><div>867,562.71</div><div>20</div><div></div><div></div><div></div></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="font-size: 28px; color: #47605A">ค่าเฉลี่ยของแต่ละวัน และส่วนเบี่ยงเบนมาตรฐานในวงเล็บ (กก./วัน)</div>
+<div style="display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px; text-align: center">
+<div style="background: #F3F7F5; border-radius: 14px; padding: 12px 6px"><div style="font-size: 28px; color: #47605A">จันทร์</div><div style="font-size: 36px">898.73</div><div style="font-size: 26px; color: #47605A">(122.04)</div></div>
+<div style="background: #F3F7F5; border-radius: 14px; padding: 12px 6px"><div style="font-size: 28px; color: #47605A">อังคาร</div><div style="font-size: 36px">959.93</div><div style="font-size: 26px; color: #47605A">(104.09)</div></div>
+<div style="background: #F3F7F5; border-radius: 14px; padding: 12px 6px"><div style="font-size: 28px; color: #47605A">พุธ</div><div style="font-size: 36px">956.43</div><div style="font-size: 26px; color: #47605A">(243.33)</div></div>
+<div style="background: #F3F7F5; border-radius: 14px; padding: 12px 6px"><div style="font-size: 28px; color: #47605A">พฤหัสบดี</div><div style="font-size: 36px">1,138.23</div><div style="font-size: 26px; color: #47605A">(338.81)</div></div>
+<div style="background: #F3F7F5; border-radius: 14px; padding: 12px 6px"><div style="font-size: 28px; color: #47605A">ศุกร์</div><div style="font-size: 36px">1,153.53</div><div style="font-size: 26px; color: #47605A">(327.03)</div></div>
+<div style="background: #F3F7F5; border-radius: 14px; padding: 12px 6px"><div style="font-size: 28px; color: #47605A">เสาร์</div><div style="font-size: 36px">1,055.93</div><div style="font-size: 26px; color: #47605A">(75.17)</div></div>
+<div style="background: #F3F7F5; border-radius: 14px; padding: 12px 6px"><div style="font-size: 28px; color: #47605A">อาทิตย์</div><div style="font-size: 36px">899.47</div><div style="font-size: 26px; color: #47605A">(133.32)</div></div>
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 32px">
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>F = 0.73 น้อยกว่าค่าวิกฤต 2.85 ที่ระดับนัยสำคัญ 0.05 จึงไม่ปฏิเสธสมมติฐานว่าค่าเฉลี่ยของทั้ง 7 วันเท่ากัน</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>แต่ละวันมีข้อมูล 3 ค่า จึงยังสรุปไม่ได้ว่าไม่แตกต่างกัน ข้อมูลหลังปรับปรุงจะเก็บให้ครบทุกวันในสัปดาห์เท่ากัน</span></div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p06">6 ข้อมูลก่อนปรับปรุงและเป้าหมาย</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">16</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p17" data-n="17" aria-label="หน้า 17 โซนการพับ 13 โซน">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 2 และ 3</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ที่มาของขอบเขต 6 จาก 13 โซนการพับ</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; gap: 40px; align-items: center">
+<div style="width: 620px; background: #0B4D40; color: #FFFFFF; border-radius: 20px; padding: 28px 36px; display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 34px; color: #BFE3D8">ในขอบเขต 6 โซน</div>
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 38px">
+<div>โซนผ้าขาว</div>
+<div>โซนเสื้อกาวน์</div>
+<div>โซนผ้าสี่เหลี่ยมสีเขียว</div>
+<div>โซนผ้าขนหนู</div>
+<div>โซนผ้านอกรายการ</div>
+<div>โซนเจ้าหน้าที่</div>
+</div></div>
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 34px; color: #47605A">นอกขอบเขต 7 โซน</div>
+<div style="background: #F3F7F5; border-radius: 20px; padding: 22px 32px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 36px">โซนผ้าห่ม โซนผ้าขวาง โซนผ้าปู</div>
+<div style="font-size: 30px; color: #47605A">ใช้เครื่องจักรขนาดใหญ่</div>
+</div>
+<div style="background: #F3F7F5; border-radius: 20px; padding: 22px 32px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 36px">โซนผ้าปลอดเชื้อ</div>
+<div style="font-size: 30px; color: #47605A">เป็นห้องปลอดเชื้อ หน่วยงานไม่ให้เข้าไปดำเนินการ</div>
+</div>
+<div style="background: #F3F7F5; border-radius: 20px; padding: 22px 32px; display: flex; flex-direction: column; gap: 6px">
+<div style="font-size: 36px">โซนผ้าพิเศษ โซนผ้ายาง โซนผ้าพันแผล</div>
+<div style="font-size: 30px; color: #47605A">ไม่มีผ้าค้างพับให้เก็บข้อมูล</div>
+</div>
+<div style="font-size: 28px; color: #47605A">จุดแยกผ้าเป็นจุดคัดแยกผ้า ไม่นับเป็นโซนการพับ</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p02">2 ความเป็นมา</a><a href="#p03">3 วัตถุประสงค์</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">17</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p18" data-n="18" aria-label="หน้า 18 การคัดกรองและ ABC">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 5</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ที่มาของ 82 ชนิด และร้อยละ 79.05</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 20px">
+<div style="background: #F3F7F5; border-radius: 20px; padding: 8px 32px; font-size: 34px">
+<div style="display: grid; grid-template-columns: 3fr 1fr 1.5fr 1.3fr; padding: 12px 0; border-bottom: 2px solid #12302A; font-size: 28px; color: #47605A; text-align: right">
+<div style="text-align: left">กลุ่มผ้า (ข้อมูลการเบิก ม.ค.–ส.ค. 2569)</div><div>จำนวนชนิด</div><div>น้ำหนัก 8 เดือน (กก.)</div><div>ร้อยละของน้ำหนัก</div>
+</div>
+<div style="display: grid; grid-template-columns: 3fr 1fr 1.5fr 1.3fr; padding: 11px 0; border-bottom: 1px solid #C9D8D2; text-align: right; color: #0B4D40"><div style="text-align: left">ผ้าชิ้นเดี่ยวในโซนที่อยู่ในขอบเขต</div><div>82</div><div>448,015.00</div><div>33.51</div></div>
+<div style="display: grid; grid-template-columns: 3fr 1fr 1.5fr 1.3fr; padding: 11px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ผ้าชิ้นเดี่ยวในโซนที่อยู่นอกขอบเขต</div><div>85</div><div>802,326.42</div><div>60.02</div></div>
+<div style="display: grid; grid-template-columns: 3fr 1fr 1.5fr 1.3fr; padding: 11px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ผ้าที่จัดเป็นชุดหรือมัด</div><div>72</div><div>86,431.08</div><div>6.47</div></div>
+<div style="display: grid; grid-template-columns: 3fr 1fr 1.5fr 1.3fr; padding: 11px 0; text-align: right"><div style="text-align: left">รวม</div><div>239</div><div>1,336,772.50</div><div>100.00</div></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 12px; font-size: 32px">
+<div style="font-size: 34px; color: #0E6B57">ขั้นตอนการคัดเลือก</div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">1</span><span>แยกผ้าชิ้นเดี่ยว 167 ชนิด ออกจากผ้าที่จัดเป็นชุดหรือมัด 72 ชนิด</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">2</span><span>เลือกผ้าชิ้นเดี่ยวที่พับใน 6 โซนในขอบเขต ได้ 82 ชนิด</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">3</span><span>เรียงน้ำหนักจากมากไปน้อย กลุ่ม A สะสมไม่เกินร้อยละ 80 กลุ่ม B ไม่เกินร้อยละ 95</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">4</span><span>วิเคราะห์ซ้ำรายเดือน ชนิดที่อยู่กลุ่มเดิมทุกเดือนถือว่าเสถียร</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px">
+<div style="background: #0B4D40; color: #FFFFFF; border-radius: 20px; padding: 20px 32px">
+<div style="font-size: 30px; color: #BFE3D8">สัดส่วนน้ำหนักของผ้ากลุ่ม A</div>
+<div style="font-size: 38px; line-height: 1.35">354,172.47 / 448,015.00 = ร้อยละ 79.05</div>
+</div>
+<div style="background: #F3F7F5; border-radius: 20px; padding: 20px 32px">
+<div style="font-size: 30px; color: #47605A">จำนวนชนิดที่เสถียร</div>
+<div style="font-size: 34px; line-height: 1.35">A 17 จาก 17 | B 18 จาก 20 | C 37 จาก 45</div>
+<div style="font-size: 30px">รวม 72 จาก 82 ชนิด คิดเป็นร้อยละ 87.80</div>
+</div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p05">5 กลุ่มผ้าเป้าหมาย</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">18</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p19" data-n="19" aria-label="หน้า 19 ผ้ากลุ่ม A 17 ชนิด">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 3 และ 5</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ผ้ากลุ่ม A 17 ชนิด เรียงตามน้ำหนักการเบิก 8 เดือน (กก.)</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 16px">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; font-size: 34px">
+<div style="background: #F3F7F5; border-radius: 20px; padding: 8px 28px">
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #47605A">1</div><div>เสื้อกาวน์แขนยาวสีขาว</div><div>66,398.33</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #47605A">2</div><div>ถุงใส่ผ้าเปื้อนโพลีเอสเตอร์</div><div>58,815.90</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2; color: #0E6B57"><div>3</div><div>ปลอกหมอนใหญ่สีขาว18"X27"</div><div>21,216.13</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2; color: #0E6B57"><div>4</div><div>ผ้าอ้อมใหญ่36"X36"</div><div>20,611.88</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #47605A">5</div><div>ผ้าสี่เหลี่ยม2ชั้นสีเขียว45"X45"</div><div>20,098.40</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2; color: #0E6B57"><div>6</div><div>ผ้าเช็ดตัว24"x48"</div><div>20,005.78</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #47605A">7</div><div>ชุดกิโมโนผู้ป่วยสีเขียว</div><div>19,824.00</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #47605A">8</div><div>เสื้อคนไข้</div><div>18,947.72</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 10px 0"><div style="color: #47605A">9</div><div>เสื้อผู้ป่วยอาการหนัก</div><div>18,565.36</div></div>
+</div>
+<div style="background: #F3F7F5; border-radius: 20px; padding: 8px 28px">
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2; color: #0E6B57"><div>10</div><div>ผ้าเช็ดตัวสีขาว12"X12"</div><div>15,913.19</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #47605A">11</div><div>ผ้าสี่เหลี่ยม2ชั้นสีเขียว36"X36"</div><div>13,950.50</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #47605A">12</div><div>กางเกงแพทย์ชายสีเขียว L</div><div>11,890.00</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #47605A">13</div><div>เสื้อเจ้าหน้าที่สีฟ้า XL</div><div>10,929.00</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #47605A">14</div><div>เสื้อกาวน์แขนสั้นสีขาว</div><div>10,641.68</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #47605A">15</div><div>ผ้าเช็ดมือมีหู 36"</div><div>10,063.70</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 1px solid #C9D8D2"><div style="color: #47605A">16</div><div>เสื้อกาวน์ปลายแขนยืดสีเขียว</div><div>8,918.40</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 13px 0; border-bottom: 2px solid #12302A"><div style="color: #47605A">17</div><div>ผ้าปูเตียงTreatmentสีขาว</div><div>7,382.50</div></div>
+<div style="display: grid; grid-template-columns: 48px 1fr auto; gap: 12px; padding: 10px 0"><div></div><div>รวม 17 ชนิด</div><div>354,172.47</div></div>
+</div>
+</div>
+<div style="font-size: 28px; color: #47605A">ข้อมูล ม.ค.–ส.ค. 2569 | <span style="color: #0E6B57">ตัวอักษรสีเขียว</span> คือผ้า 4 ชนิดที่เลือกออกแบบเครื่องช่วยพับ</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p03">3 วัตถุประสงค์</a><a href="#p05">5 กลุ่มผ้าเป้าหมาย</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">19</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p20" data-n="20" aria-label="หน้า 20 สถานะเทียบแผน">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 4</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ผลการดำเนินงานเทียบกับแผนรายขั้นตอน</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 16px">
+<div style="background: #F3F7F5; border-radius: 20px; padding: 8px 32px; font-size: 32px; line-height: 1.35">
+<div style="display: grid; grid-template-columns: 480px 250px 250px 1fr; gap: 20px; padding: 12px 0; border-bottom: 2px solid #12302A; font-size: 28px; color: #47605A">
+<div>ขั้นตอน</div><div>แผน</div><div>ผลการดำเนินงาน</div><div>หมายเหตุ</div>
+</div>
+<div style="display: grid; grid-template-columns: 480px 250px 250px 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div>1 ศึกษาสภาพปัจจุบันและกำหนดปัญหา</div><div>มิ.ย./1 – ส.ค./4</div><div>มิ.ย./1 – ส.ค./4</div><div>เสร็จ ตามแผน</div></div>
+<div style="display: grid; grid-template-columns: 480px 250px 250px 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div>2 ศึกษาเอกสารและทฤษฎีที่เกี่ยวข้อง</div><div>มิ.ย./1 – ก.ย./4</div><div>มิ.ย./1 – ต.ค./1</div><div>กำลังดำเนินการ เกินแผน 1 สัปดาห์</div></div>
+<div style="display: grid; grid-template-columns: 480px 250px 250px 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div>3 คัดเลือกกลุ่มผ้าเป้าหมาย</div><div>ส.ค./3 – ก.ย./2</div><div>ส.ค./3 – ต.ค./1</div><div style="color: #0B4D40">เสร็จ ช้ากว่าแผน 3 สัปดาห์ เพราะปรับขอบเขตของโซนการพับ และคำนวณการจัดกลุ่มผ้าใหม่</div></div>
+<div style="display: grid; grid-template-columns: 480px 250px 250px 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div>4 เก็บข้อมูลก่อนปรับปรุง</div><div>ส.ค./3 – ต.ค./1</div><div>ส.ค./3 – ต.ค./1</div><div>เสร็จ ตามแผน</div></div>
+<div style="display: grid; grid-template-columns: 480px 250px 250px 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div>5 วิเคราะห์ข้อมูลและกำหนดเป้าหมาย</div><div>ก.ย./1 – ต.ค./4</div><div>ก.ย./3 – ต.ค./1</div><div>กำลังดำเนินการ อยู่ในช่วงของแผน</div></div>
+<div style="display: grid; grid-template-columns: 480px 250px 250px 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div>6 ออกแบบวิธีการปรับปรุง</div><div>พ.ย./1 – พ.ย./4</div><div>เริ่ม ต.ค./1</div><div style="color: #0B4D40">เริ่มก่อนแผน ได้แนวคิดเครื่องช่วยพับและแบบจำลอง 3 มิติ การออกแบบรายละเอียดทำต่อตามแผน</div></div>
+<div style="display: grid; grid-template-columns: 480px 250px 250px 1fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div>7 ถึง 9 ทดลอง เก็บข้อมูล และสรุปผล</div><div>ธ.ค./1 – มี.ค./4</div><div></div><div style="color: #47605A">ยังไม่ถึงกำหนด</div></div>
+<div style="display: grid; grid-template-columns: 480px 250px 250px 1fr; gap: 20px; padding: 12px 0; align-items: center"><div>10 จัดทำรายงานและนำเสนอ</div><div>มิ.ย./1 – มี.ค./4</div><div>มิ.ย./1 – ต.ค./1</div><div>กำลังดำเนินการ</div></div>
+</div>
+<div style="font-size: 28px; color: #47605A">ส.ค./3 หมายถึงสัปดาห์ที่ 3 ของเดือนสิงหาคม 2569 | ข้อมูลถึงสัปดาห์ที่ 1 ของเดือนตุลาคม 2569</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p04">4 แผนการดำเนินงาน</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">20</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p21" data-n="21" aria-label="หน้า 21 เวลาการพับรายชนิดผ้า">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 7</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ที่มาของเวลาพับผ้ากลุ่ม A 1,600.5 นาที/วัน</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 16px">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; font-size: 30px">
+<div style="background: #F3F7F5; border-radius: 20px; padding: 6px 26px">
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 10px 0; border-bottom: 2px solid #12302A; font-size: 26px; color: #47605A; text-align: right"><div style="text-align: left">ชนิดผ้า</div><div>วินาที/ชิ้น</div><div>ชิ้น/วัน</div><div>นาที/วัน</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">เสื้อกาวน์สีขาว แขนยาวและแขนสั้น</div><div>27.82</div><div>979.0</div><div>453.9</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">เสื้อผู้ป่วยอาการหนัก และเสื้อคนไข้</div><div>15.75</div><div>701.7</div><div>184.2</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right; color: #0E6B57"><div style="text-align: left">ผ้าอ้อมใหญ่36"X36"</div><div>14.44</div><div>678.6</div><div>163.4</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right; color: #0E6B57"><div style="text-align: left">ปลอกหมอนใหญ่สีขาว18"X27"</div><div>11.03</div><div>698.5</div><div>128.4</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ถุงใส่ผ้าเปื้อนโพลีเอสเตอร์</div><div>13.60</div><div>558.6</div><div>126.6</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right; color: #0E6B57"><div style="text-align: left">ผ้าเช็ดตัวสีขาว12"X12"</div><div>3.02</div><div>2,030.1</div><div>102.3</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ชุดกิโมโนผู้ป่วยสีเขียว</div><div>24.73</div><div>244.7</div><div>100.9</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; text-align: right"><div style="text-align: left">ผ้าเช็ดมือมีหู 36"</div><div>12.33</div><div>414.1</div><div>85.1</div></div>
+</div>
+<div style="background: #F3F7F5; border-radius: 20px; padding: 6px 26px">
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 10px 0; border-bottom: 2px solid #12302A; font-size: 26px; color: #47605A; text-align: right"><div style="text-align: left">ชนิดผ้า</div><div>วินาที/ชิ้น</div><div>ชิ้น/วัน</div><div>นาที/วัน</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right; color: #0E6B57"><div style="text-align: left">ผ้าเช็ดตัว24"x48"</div><div>15.61</div><div>312.4</div><div>81.3</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">กางเกงแพทย์ชายสีเขียว L</div><div>10.32</div><div>244.7</div><div>42.1</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">เสื้อกาวน์ปลายแขนยืดสีเขียว</div><div>27.04</div><div>91.8</div><div>41.4</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ผ้าปูเตียงTreatmentสีขาว</div><div>33.72</div><div>60.8</div><div>34.1</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ผ้าสี่เหลี่ยม2ชั้นสีเขียว45"X45"</div><div>7.91</div><div>206.8</div><div>27.3</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ผ้าสี่เหลี่ยม2ชั้นสีเขียว36"X36"</div><div>5.38</div><div>229.6</div><div>20.6</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; border-bottom: 2px solid #12302A; text-align: right"><div style="text-align: left">เสื้อเจ้าหน้าที่สีฟ้า XL</div><div>12.25</div><div>45.0</div><div>9.2</div></div>
+<div style="display: grid; grid-template-columns: 1fr 96px 116px 110px; gap: 10px; padding: 9px 0; text-align: right"><div style="text-align: left">รวมผ้ากลุ่ม A</div><div></div><div></div><div>1,600.5</div></div>
+</div>
+</div>
+<div style="font-size: 28px; line-height: 1.35; color: #47605A">นาที/วัน = วินาที/ชิ้น x ชิ้น/วัน / 60 คำนวณจากค่าก่อนปัดเศษ | ชิ้น/วัน จากข้อมูลการเบิก 8 เดือน | <span style="color: #0E6B57">สีเขียว</span> คือผ้าที่เลือกออกแบบเครื่องช่วยพับ</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p07">7 เวลาการพับของผ้ากลุ่ม A</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">21</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p22" data-n="22" aria-label="หน้า 22 ที่มาของ 0.996 และ 156.2">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 7</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ที่มาของ 0.996 กก. ต่อนาที และ 156.2 นาที/วัน</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 18px">
+<div style="font-size: 32px">ผ้าค้างพับชั่งรวมตามโซน ไม่แยกชนิดผ้า จึงใช้อัตราร่วมของผ้ากลุ่ม A แปลงเป้าหมายจากน้ำหนักเป็นเวลาพับ</div>
+<div style="display: grid; grid-template-columns: 64px 1fr 500px; gap: 22px 28px; align-items: center; background: #F3F7F5; border-radius: 20px; padding: 30px 36px; font-size: 38px; line-height: 1.35">
+<div style="font-size: 44px; color: #0E6B57">1</div><div>น้ำหนักผ้ากลุ่ม A ที่พับต่อวัน เท่ากับผลรวมของ ชิ้น/วัน x น้ำหนักต่อชิ้นที่ชั่งจริง ครบ 17 ชนิด</div><div style="font-size: 46px; text-align: right">1,594.35 กก./วัน</div>
+<div style="font-size: 44px; color: #0E6B57">2</div><div>เวลาพับผ้ากลุ่ม A จากการบันทึกขั้นตอนการพับ</div><div style="font-size: 46px; text-align: right">1,600.5 นาที/วัน</div>
+<div style="font-size: 44px; color: #0E6B57">3</div><div>อัตราร่วม เท่ากับ 1,594.35 / 1,600.5</div><div style="font-size: 46px; text-align: right; color: #0E6B57">0.996 กก. ต่อนาที</div>
+<div style="font-size: 44px; color: #0E6B57">4</div><div>เวลาพับที่ต้องลด เท่ากับ 155.56 / 0.996</div><div style="font-size: 46px; text-align: right; color: #0E6B57">156.2 นาที/วัน</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 32px">
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>156.2 นาที/วัน คิดเป็นร้อยละ 9.8 ของเวลาพับผ้ากลุ่ม A</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>น้ำหนักต่อชิ้นได้จากการชั่งผ้าชนิดละ 10 ชิ้น | <a href="#p21">เวลาพับรายชนิดผ้า</a> | <a href="#p14">ที่มาของ 155.56</a></span></div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p07">7 เวลาการพับของผ้ากลุ่ม A</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">22</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p23" data-n="23" aria-label="หน้า 23 การเลือกผ้าสำหรับเครื่อง">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 28px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 8</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ที่มาของผ้า 4 ชนิดที่เลือกออกแบบเครื่องช่วยพับ</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 18px">
+<div style="font-size: 32px">พิจารณาผ้าผืนเรียบในกลุ่ม A เรียงตามเวลากลุ่ม ข (ถือและจัดวางผ้า) และ ค (พับจริง) ซึ่งเป็นเวลาที่เครื่องช่วยพับลดได้</div>
+<div style="background: #F3F7F5; border-radius: 20px; padding: 8px 32px; font-size: 38px">
+<div style="display: grid; grid-template-columns: 1.6fr 0.7fr 1.5fr; gap: 20px; padding: 12px 0; border-bottom: 2px solid #12302A; font-size: 28px; color: #47605A">
+<div>ชนิดผ้า</div><div style="text-align: right">ข และ ค (นาที/วัน)</div><div>ผลการพิจารณา</div>
+</div>
+<div style="display: grid; grid-template-columns: 1.6fr 0.7fr 1.5fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid #C9D8D2; color: #0B4D40"><div>ผ้าอ้อมใหญ่36"X36"</div><div style="text-align: right">122.5</div><div>เลือก</div></div>
+<div style="display: grid; grid-template-columns: 1.6fr 0.7fr 1.5fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid #C9D8D2; color: #0B4D40"><div>ปลอกหมอนใหญ่สีขาว18"X27"</div><div style="text-align: right">93.4</div><div>เลือก</div></div>
+<div style="display: grid; grid-template-columns: 1.6fr 0.7fr 1.5fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid #C9D8D2; color: #47605A"><div>ถุงใส่ผ้าเปื้อนโพลีเอสเตอร์</div><div style="text-align: right">93.3</div><div>ไม่เสนอ เพราะมีสายผูก</div></div>
+<div style="display: grid; grid-template-columns: 1.6fr 0.7fr 1.5fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid #C9D8D2; color: #0B4D40"><div>ผ้าเช็ดตัว24"x48"</div><div style="text-align: right">52.9</div><div>เลือก</div></div>
+<div style="display: grid; grid-template-columns: 1.6fr 0.7fr 1.5fr; gap: 20px; padding: 12px 0; border-bottom: 1px solid #C9D8D2; color: #47605A"><div>ผ้าเช็ดมือมีหู 36"</div><div style="text-align: right">52.9</div><div>ยังไม่ทำในรอบนี้</div></div>
+<div style="display: grid; grid-template-columns: 1.6fr 0.7fr 1.5fr; gap: 20px; padding: 12px 0; color: #0B4D40"><div>ผ้าเช็ดตัวสีขาว12"X12"</div><div style="text-align: right">35.2</div><div>เลือก ตามคำแนะนำของอาจารย์ที่ปรึกษา</div></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 32px">
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ผ้า 4 ชนิดที่เลือกมีเวลากลุ่ม ข และ ค รวม 304.0 นาที/วัน เทียบกับค่าอ้างอิงของเป้าหมาย 156.2 นาที/วัน</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>เสื้อกาวน์สีขาวใช้เวลาพับมากที่สุด 453.9 นาที/วัน กำหนดเป็นงานเสริมหลังการสอบความก้าวหน้า</span></div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p08">8 ผ้าและเงื่อนไขการออกแบบ</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">23</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p24" data-n="24" aria-label="หน้า 24 เงื่อนไขการออกแบบ">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 24px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 8 และ 12</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">เงื่อนไขการออกแบบ 8 ข้อ และผลตรวจกับแบบจำลอง</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 14px">
+<div style="background: #F3F7F5; border-radius: 20px; padding: 6px 32px; font-size: 30px; line-height: 1.3">
+<div style="display: grid; grid-template-columns: 60px 1.15fr 1fr; gap: 20px; padding: 10px 0; border-bottom: 2px solid #12302A; font-size: 28px; color: #47605A"><div></div><div>เงื่อนไข</div><div>ผลตรวจ</div></div>
+<div style="display: grid; grid-template-columns: 60px 1.15fr 1fr; gap: 20px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div style="color: #0E6B57">T1</div><div>ขนาดไม่เกิน 100 x 100 x 100 ซม. ต่อเครื่อง</div><div>ผ่าน</div></div>
+<div style="display: grid; grid-template-columns: 60px 1.15fr 1fr; gap: 20px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div style="color: #0E6B57">T2</div><div>ส่วนที่วางบนโต๊ะหนักไม่เกิน 100 กก.</div><div>ผ่าน (7.46 ถึง 12.38 กก.)</div></div>
+<div style="display: grid; grid-template-columns: 60px 1.15fr 1fr; gap: 20px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div style="color: #0E6B57">T3</div><div>ขนาดผ้า ขนาดหลังพับ และจำนวนต่อเซต ตามวิธีที่หน้างาน</div><div>ตรง ยกเว้นเครื่องผ้าอ้อมใหญ่ยังใช้ 22.9 x 22.9 ซม. (วัดได้ 22.9 x 25.9)</div></div>
+<div style="display: grid; grid-template-columns: 60px 1.15fr 1fr; gap: 20px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div style="color: #0E6B57">T4</div><div>รอบเวลาสั้นกว่าเวลาพับปัจจุบัน</div><div>คาดว่าผ่าน ยังไม่ได้จับเวลา</div></div>
+<div style="display: grid; grid-template-columns: 60px 1.15fr 1fr; gap: 20px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div style="color: #0E6B57">T5</div><div>ผิวที่สัมผัสผ้าเรียบ ไม่เป็นสนิม ทำความสะอาดได้</div><div>ใช้แผ่นอะลูมิเนียมคอมโพสิต ยังไม่ได้ทดสอบการทำความสะอาด</div></div>
+<div style="display: grid; grid-template-columns: 60px 1.15fr 1fr; gap: 20px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div style="color: #0E6B57">T6</div><div>ใช้พลังงานที่มีอยู่ ณ จุดพับเท่านั้น</div><div>ผ่าน ไม่ใช้ไฟฟ้าหรือลมอัด</div></div>
+<div style="display: grid; grid-template-columns: 60px 1.15fr 1fr; gap: 20px; padding: 9px 0; border-bottom: 1px solid #C9D8D2; align-items: center"><div style="color: #0E6B57">T7</div><div>ผู้ปฏิบัติงาน 1 คน แรงเหยียบ 18 ถึง 90 นิวตัน ระยะเหยียบ 13 ถึง 65 มม. (MIL-STD-1472H)</div><div><a href="#p28">2 เครื่องเกิน 90 นิวตัน</a></div></div>
+<div style="display: grid; grid-template-columns: 60px 1.15fr 1fr; gap: 20px; padding: 9px 0; align-items: center"><div style="color: #0E6B57">E1</div><div>งบประมาณ 2,300 บาทต่อเครื่อง</div><div><a href="#p28">2 เครื่องเกินงบต่อเครื่อง</a></div></div>
+</div>
+<div style="font-size: 28px; line-height: 1.35; color: #47605A">วิธีที่หน้างานต่างจากมาตรฐานการปฏิบัติงาน: ผ้าเช็ดตัว24"x48" พับครึ่ง 3 ครั้ง ไม่รวมเซตและไม่ใส่ถุง | ผ้าเช็ดตัวสีขาว12"X12" มัดเซตละ 10 ชิ้น (มาตรฐานกำหนด 20 ชิ้น) | หน่วยงานยืนยันว่ายอมรับได้</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p08">8 ผ้าและเงื่อนไขการออกแบบ</a><a href="#p12">12 ปัญหาและแนวทางแก้ไข</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">24</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p25" data-n="25" aria-label="หน้า 25 เกณฑ์และคะแนน">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 24px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 8</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">เกณฑ์ น้ำหนัก และคะแนนของทางเลือก</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 14px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 28px; color: #47605A">เกณฑ์ 6 ข้อและน้ำหนัก (ให้คะแนน 1 ถึง 5 ต่อเกณฑ์ คูณน้ำหนัก รวมเต็ม 5.00)</div>
+<div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; font-size: 28px; line-height: 1.25; color: #FFFFFF">
+<div style="background: #0B4D40; border-radius: 10px 0 0 10px; padding: 12px 18px">ความเร็ว<br>ร้อยละ 30</div>
+<div style="background: #1F6657; padding: 12px 18px">ต้นทุน<br>ร้อยละ 25</div>
+<div style="background: #3F7F70; padding: 12px 18px">ขนาดและน้ำหนัก<br>ร้อยละ 15</div>
+<div style="background: #3F7F70; padding: 12px 18px">ความง่ายในการสร้าง<br>ร้อยละ 15</div>
+<div style="background: #5C7069; padding: 12px 18px">การใช้และความปลอดภัย<br>ร้อยละ 10</div>
+<div style="background: #5C7069; border-radius: 0 10px 10px 0; padding: 12px 18px">ความสะอาด<br>ร้อยละ 5</div>
+</div>
+</div>
+<div style="background: #F3F7F5; border-radius: 20px; padding: 6px 32px; font-size: 34px">
+<div style="display: grid; grid-template-columns: 2.4fr 1fr 1fr 1fr 1fr; padding: 10px 0; border-bottom: 2px solid #12302A; font-size: 28px; color: #47605A; text-align: right"><div style="text-align: left">คะแนนรวมของฟังก์ชันพับ</div><div>2A</div><div>2B</div><div>2C</div><div>2D</div></div>
+<div style="display: grid; grid-template-columns: 2.4fr 1fr 1fr 1fr 1fr; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ผ้าเช็ดตัวสีขาว12"X12"</div><div style="color: #0E6B57">4.05 (เลือก)</div><div>3.50</div><div>3.85</div><div>3.85</div></div>
+<div style="display: grid; grid-template-columns: 2.4fr 1fr 1fr 1fr 1fr; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ปลอกหมอนใหญ่สีขาว18"X27"</div><div>2.30</div><div>2.70</div><div>3.00</div><div style="color: #0E6B57">3.85 (เลือก)</div></div>
+<div style="display: grid; grid-template-columns: 2.4fr 1fr 1fr 1fr 1fr; padding: 9px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ผ้าอ้อมใหญ่36"X36"</div><div>2.00</div><div>3.50</div><div>3.40</div><div style="color: #0E6B57">4.20 (เลือก)</div></div>
+<div style="display: grid; grid-template-columns: 2.4fr 1fr 1fr 1fr 1fr; padding: 9px 0; text-align: right"><div style="text-align: left">ผ้าเช็ดตัว24"x48"</div><div>2.00</div><div>2.45</div><div>2.85</div><div style="color: #0E6B57">3.30 (เลือก)</div></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 28px; line-height: 1.35">
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ผ้าเช็ดตัวสีขาว12"X12": 2A แผ่นพับขับด้วยเท้าเหยียบ | 2B ลมอัด | 2C เซอร์โวมอเตอร์ | 2D ใบกดผ้าลงร่อง</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ผ้าอีก 3 ชนิด: 2D ผู้ปฏิบัติงานพับทบแรก เครื่องพับทบสุดท้ายด้วยแผ่นพับเดียว | 2A ถึง 2C เครื่องพับมากกว่า 1 ทบ ต้องใช้แท่นใหญ่ขึ้น</span></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<div style="font-size: 28px; color: #47605A">ทางเลือกที่ได้คะแนนสูงสุดของฟังก์ชันอื่น เหมือนกันทั้ง 4 เครื่อง</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; font-size: 28px; line-height: 1.3">
+<div style="background: #F3F7F5; border-radius: 14px; padding: 12px 20px"><span style="color: #0E6B57">1A | 4.30</span><br>วางด้วยมือบนแท่นราบ มีขอบกั้น 2 ด้าน</div>
+<div style="background: #F3F7F5; border-radius: 14px; padding: 12px 20px"><span style="color: #0E6B57">3B | 3.95</span><br>บานรับเปิดลง ผ้าตกซ้อนใต้แท่น</div>
+<div style="background: #F3F7F5; border-radius: 14px; padding: 12px 20px"><span style="color: #0E6B57">4B | 4.60</span><br>ล้อนับแบบกลไก มีกระดิ่ง</div>
+<div style="background: #F3F7F5; border-radius: 14px; padding: 12px 20px"><span style="color: #0E6B57">5A | 4.30</span><br>ช่องรับกองมีร่อง 2 ข้าง</div>
+</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p08">8 ผ้าและเงื่อนไขการออกแบบ</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">25</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p26" data-n="26" aria-label="หน้า 26 แบบจำลอง 3 มิติ">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 24px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 9, 10 และ 12</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ผลจากแบบจำลอง 3 มิติของเครื่อง 4 เครื่อง</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; gap: 36px">
+<div style="flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 14px">
+<div style="background: #F3F7F5; border-radius: 20px; padding: 6px 28px; font-size: 30px">
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 10px; padding: 10px 0; border-bottom: 2px solid #12302A; font-size: 26px; line-height: 1.25; color: #47605A; text-align: right; align-items: end"><div style="text-align: left">รายการ</div><div>ผ้าเช็ดตัว<br>12"X12"</div><div>ปลอกหมอน<br>18"X27"</div><div>ผ้าอ้อมใหญ่<br>36"X36"</div><div>ผ้าเช็ดตัว<br>24"x48"</div></div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 10px; padding: 7px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">กว้าง (ซม.)</div><div>39.7</div><div>64.8</div><div>55.0</div><div>70.2</div></div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 10px; padding: 7px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ลึก (ซม.)</div><div>50.5</div><div>58.4</div><div>44.2</div><div>51.8</div></div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 10px; padding: 7px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">สูง (ซม.)</div><div>30.8</div><div>42.3</div><div>42.3</div><div>59.8</div></div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 10px; padding: 7px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">สูงเมื่อแผ่นพับตั้ง 90 องศา (ซม.)</div><div>42.1</div><div>66.1</div><div>61.2</div><div>86.3</div></div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 10px; padding: 7px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">แท่นวางผ้าสูงจากโต๊ะ (ซม.)</div><div>26.0</div><div>37.5</div><div>37.5</div><div>54.5</div></div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 10px; padding: 7px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">มวลรวม (กก.)</div><div>8.4</div><div>11.9</div><div>9.8</div><div>13.3</div></div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 10px; padding: 7px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">มุมของแผ่นพับตอนกลอนปลด (องศา)</div><div>170.01</div><div>170.05</div><div>170.05</div><div>171.56</div></div>
+<div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 10px; padding: 7px 0; text-align: right"><div style="text-align: left">มุมเปิดของบานรับ (องศา)</div><div>58.16</div><div>58.96</div><div>58.96</div><div>59.52</div></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 28px; line-height: 1.35">
+<div style="color: #47605A">ปัญหาของกลไกที่แบบจำลองพบ กำหนดแก้หลังการสอบความก้าวหน้า</div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>กลอนล็อกกลับได้เมื่อบานรับปิดถึง 0 องศาพอดี ยังไม่มีระยะเผื่อ</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>สปริงดึงแผ่นพับกลับยังไม่มีแรงขณะแผ่นพับราบ</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>เมื่อกลอนปลด บานรับตกอิสระประมาณ 54 องศาก่อนเชือกรั้ง ยังไม่ได้คิดแรงกระแทก</span></div>
+</div>
+</div>
+<div style="width: 440px; display: flex; flex-direction: column; justify-content: center; gap: 12px">
+<div style="background: #F3F7F5; border-radius: 20px; padding: 16px; display: flex; align-items: center; justify-content: center"><img src="assets/machine-diaper-on-table.png" alt="เครื่องวางบนโต๊ะพับ ชุดคันเหยียบอยู่บนพื้น" style="width: 408px; height: 348px; object-fit: contain; border-radius: 10px"></div>
+<div style="font-size: 26px; line-height: 1.35; color: #47605A">เครื่องสำหรับผ้าอ้อมใหญ่36"X36" วางบนโต๊ะสูง 80 ซม. ชุดคันเหยียบอยู่บนพื้น</div>
+<div style="font-size: 26px; line-height: 1.35; color: #47605A">จำลอง 6 ท่าของ 1 รอบการทำงาน ไม่พบชิ้นส่วนชนกัน | ขนาดไม่รวมชุดคันเหยียบ 18.0 x 39.0 x 16.9 ซม.</div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p09">9 หลักการทำงาน</a><a href="#p10">10 เครื่อง 4 เครื่อง</a><a href="#p12">12 ปัญหาและแนวทางแก้ไข</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">26</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p27" data-n="27" aria-label="หน้า 27 เวลาที่คาดว่าลดได้">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 24px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 10 และ 12</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">ที่มาของเวลาที่คาดว่าลดได้ 131–176 นาที/วัน</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 18px">
+<div style="background: #F3F7F5; border-radius: 20px; padding: 6px 32px; font-size: 34px">
+<div style="display: grid; grid-template-columns: 1.9fr 1.7fr 1fr 0.9fr 1fr 1.5fr; gap: 14px; padding: 10px 0; border-bottom: 2px solid #12302A; font-size: 26px; line-height: 1.25; color: #47605A; text-align: right; align-items: end"><div style="text-align: left">ชนิดผ้า</div><div style="text-align: left">ส่วนที่ผู้ปฏิบัติงานทำก่อนวางผ้า</div><div>ลดได้<br>(วินาที/ชิ้น)</div><div>ชิ้น/วัน</div><div>ลดได้<br>(นาที/วัน)</div><div>เวลาต่อชิ้น (วินาที)<br>ปัจจุบัน และที่คาด</div></div>
+<div style="display: grid; grid-template-columns: 1.9fr 1.7fr 1fr 0.9fr 1fr 1.5fr; gap: 14px; padding: 18px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ผ้าเช็ดตัวสีขาว12"X12"</div><div style="text-align: left">ไม่มี วางทั้งผืน</div><div>1.2–1.7</div><div>2,030.1</div><div style="color: #0E6B57">41–58</div><div>3.02 เหลือ 1.3–1.8</div></div>
+<div style="display: grid; grid-template-columns: 1.9fr 1.7fr 1fr 0.9fr 1fr 1.5fr; gap: 14px; padding: 18px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ปลอกหมอนใหญ่สีขาว18"X27"</div><div style="text-align: left">สะบัดและพับทบแรก</div><div>3–4.5</div><div>698.5</div><div style="color: #0E6B57">35–52</div><div>11.03 เหลือ 6.5–8.0</div></div>
+<div style="display: grid; grid-template-columns: 1.9fr 1.7fr 1fr 0.9fr 1fr 1.5fr; gap: 14px; padding: 18px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ผ้าอ้อมใหญ่36"X36"</div><div style="text-align: left">พับ 3 ทบแรก</div><div>3–3.5</div><div>678.6</div><div style="color: #0E6B57">34–40</div><div>14.44 เหลือ 10.9–11.4</div></div>
+<div style="display: grid; grid-template-columns: 1.9fr 1.7fr 1fr 0.9fr 1fr 1.5fr; gap: 14px; padding: 18px 0; border-bottom: 2px solid #12302A; text-align: right"><div style="text-align: left">ผ้าเช็ดตัว24"x48"</div><div style="text-align: left">พับครึ่ง 2 ครั้ง</div><div>4–5</div><div>312.4</div><div style="color: #0E6B57">21–26</div><div>15.61 เหลือ 10.6–11.6</div></div>
+<div style="display: grid; grid-template-columns: 1.9fr 1.7fr 1fr 0.9fr 1fr 1.5fr; gap: 14px; padding: 18px 0; text-align: right"><div style="text-align: left">รวม 4 เครื่อง</div><div></div><div></div><div></div><div style="color: #0E6B57">131–176</div><div></div></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 32px">
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ลดได้ (นาที/วัน) = วินาทีที่ลดได้ต่อชิ้น x ชิ้น/วัน / 60 | เวลาที่ลดมาจากการพับทบสุดท้าย การวางกอง และการนับ</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>เทียบกับค่าอ้างอิง 156.2 นาที/วัน ค่าต่ำสุด 131 ยังขาดประมาณ 25 นาที/วัน จึงมีงานเสริมสำหรับเสื้อกาวน์สีขาว</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>เป็นค่าประมาณจากเวลาของแต่ละขั้นในแผนภูมิสองมือ ต้องจับเวลากับเครื่องจริงก่อนใช้เป็นผล</span></div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p10">10 เครื่อง 4 เครื่อง</a><a href="#p12">12 ปัญหาและแนวทางแก้ไข</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">27</span></div>
+</div>
+</div>
+</section>
+<section class="slide" id="p28" data-n="28" aria-label="หน้า 28 แรงเหยียบและต้นทุน">
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 56px 96px 40px; display: flex; flex-direction: column; gap: 24px; background: #FFFFFF; color: #12302A; font-family: Supermarket, sans-serif; font-weight: 400; line-height: 1.4">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-size: 28px; color: #47605A">Backup | ข้อมูลประกอบหน้า 10 และ 12</div>
+<h1 style="margin: 0; font-size: 56px; font-weight: 400; line-height: 1.25">แรงเหยียบที่คำนวณได้ และประมาณการต้นทุนวัสดุ</h1>
+</div>
+<div style="flex-grow: 1; min-height: 0; display: flex; flex-direction: column; justify-content: center; gap: 18px">
+<div style="background: #F3F7F5; border-radius: 20px; padding: 6px 32px; font-size: 36px">
+<div style="display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr 1fr; gap: 14px; padding: 10px 0; border-bottom: 2px solid #12302A; font-size: 26px; line-height: 1.25; color: #47605A; text-align: right; align-items: end"><div style="text-align: left">รายการ</div><div>ผ้าเช็ดตัว<br>12"X12"</div><div>ปลอกหมอน<br>18"X27"</div><div>ผ้าอ้อมใหญ่<br>36"X36"</div><div>ผ้าเช็ดตัว<br>24"x48"</div></div>
+<div style="display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr 1fr; gap: 14px; padding: 11px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">แรงเหยียบ เมื่อพับช้า (นิวตัน)</div><div>22.3</div><div>92.0</div><div>44.1</div><div>99.2</div></div>
+<div style="display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr 1fr; gap: 14px; padding: 11px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">แรงเหยียบ เมื่อพับเร็ว (นิวตัน)</div><div>32.0</div><div>165.6</div><div>74.1</div><div>189.9</div></div>
+<div style="display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr 1fr; gap: 14px; padding: 11px 0; border-bottom: 2px solid #12302A; text-align: right"><div style="text-align: left">เทียบเกณฑ์ 18 ถึง 90 นิวตัน</div><div style="color: #0E6B57">ผ่าน</div><div>เกิน</div><div style="color: #0E6B57">ผ่าน</div><div>เกิน</div></div>
+<div style="display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr 1fr; gap: 14px; padding: 11px 0; border-bottom: 1px solid #C9D8D2; text-align: right"><div style="text-align: left">ต้นทุนวัสดุ (บาท)</div><div>1,875–2,092</div><div>2,433–2,650</div><div>1,935–2,152</div><div>2,596–2,813</div></div>
+<div style="display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr 1fr; gap: 14px; padding: 11px 0; text-align: right"><div style="text-align: left">เทียบงบ 2,300 บาทต่อเครื่อง</div><div style="color: #0E6B57">อยู่ในงบ</div><div>เกิน 133–350</div><div style="color: #0E6B57">อยู่ในงบ</div><div>เกิน 296–513</div></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 32px; line-height: 1.35">
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ต้นทุนวัสดุรวม 4 เครื่อง 8,839–9,707 บาท เทียบกับงบ 9,200 บาท ไม่รวมค่าตัดเลเซอร์และค่าขนส่ง</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>ระยะเหยียบ 65.4 มม. เกินเกณฑ์ 65 มม. อยู่ 0.4 มม. | เกณฑ์แรงและระยะเหยียบจาก MIL-STD-1472H</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>วัสดุหลัก: แผ่นอะลูมิเนียมคอมโพสิต 4 มม. เหล็กฉากเจาะรู ไม้อัด 10 มม. ลวดสลิงสเตนเลส 2 มม. และสปริงดึง</span></div>
+<div style="display: flex; gap: 14px"><span style="color: #0E6B57">•</span><span>เครื่อง 2 เครื่องที่เกินได้คะแนนเกณฑ์ต้นทุนลดลงแล้ว และกำหนดปรับแบบด้วยแบบจำลอง 3 มิติหลังการสอบความก้าวหน้า</span></div>
+</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; font-size: 26px; color: #47605A">
+<div style="display: flex; gap: 36px; align-items: center"><span>กลับหน้าที่นำเสนอ</span><a href="#p10">10 เครื่อง 4 เครื่อง</a><a href="#p12">12 ปัญหาและแนวทางแก้ไข</a></div>
+<div style="display: flex; gap: 40px; align-items: center"><a href="#p13">Backup</a><span style="font-size: 30px; color: #12302A">28</span></div>
+</div>
+</div>
+</section>
+</main>
+<button class="nav" id="prev" type="button" aria-label="หน้าก่อนหน้า"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<button class="nav" id="next" type="button" aria-label="หน้าถัดไป"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg></button>
+<script>
+(function () {
+  var stage = document.getElementById('stage');
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var prev = document.getElementById('prev'), next = document.getElementById('next');
+  var cur = -1;
+  function fit() {
+    var w = window.innerWidth, h = window.innerHeight;
+    var s = Math.min(w / 1920, h / 1080);
+    stage.style.transform = 'translate(' + (w - 1920 * s) / 2 + 'px,' + (h - 1080 * s) / 2 + 'px) scale(' + s + ')';
+  }
+  function indexFromHash() {
+    var id = location.hash.replace('#', '');
+    for (var i = 0; i < slides.length; i++) if (slides[i].id === id) return i;
+    return -1;
+  }
+  function show(i) {
+    if (i < 0 || i >= slides.length || i === cur) return;
+    if (cur >= 0) slides[cur].classList.remove('on');
+    slides[i].classList.add('on');
+    cur = i;
+    prev.disabled = i === 0;
+    next.disabled = i === slides.length - 1;
+    document.title = 'หน้า ' + (i + 1) + ' | MfE02/2026 ความก้าวหน้าครั้งที่ 1';
+  }
+  function go(i) {
+    if (i < 0 || i >= slides.length || i === cur) return;
+    show(i);
+    location.hash = '#' + slides[i].id;
+  }
+  window.addEventListener('hashchange', function () { var i = indexFromHash(); if (i >= 0) show(i); });
+  window.addEventListener('resize', fit);
+  prev.addEventListener('click', function () { go(cur - 1); });
+  next.addEventListener('click', function () { go(cur + 1); });
+  document.addEventListener('keydown', function (e) {
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    var k = e.key, onLink = document.activeElement && document.activeElement.tagName === 'A';
+    if (k === 'ArrowRight' || k === 'ArrowDown' || k === 'PageDown' || (k === ' ' && !onLink)) { e.preventDefault(); go(cur + 1); }
+    else if (k === 'ArrowLeft' || k === 'ArrowUp' || k === 'PageUp') { e.preventDefault(); go(cur - 1); }
+    else if (k === 'Home') { e.preventDefault(); go(0); }
+    else if (k === 'End') { e.preventDefault(); go(slides.length - 1); }
+    else if (k === 'b' || k === 'B') { go(12); }
+    else if (k === 'f' || k === 'F') { if (document.fullscreenElement) document.exitFullscreen(); else if (document.documentElement.requestFullscreen) document.documentElement.requestFullscreen(); }
+  });
+  var x0 = null, y0 = null;
+  document.addEventListener('touchstart', function (e) { if (e.touches.length === 1) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; } }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > 2 * Math.abs(dy)) go(cur + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+  fit();
+  var first = indexFromHash();
+  if (first < 0) { first = 0; history.replaceState(null, '', '#' + slides[0].id); }
+  show(first);
+})();
+</script>
+</body>
+</html>
